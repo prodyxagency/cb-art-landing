@@ -275,7 +275,6 @@
       <div class="props-ttl" id="sectionTitle">Propiedades Destacadas</div>
       <div class="props-sub" id="sectionSub">Una selección curada de residencias de lujo en Estepona, Guadalmina, Sotogrande y Marbella</div>
     </div>
-    <button class="cat-lnk" id="viewAllBtn">Ver catálogo completo →</button>
   </div>
 
   <!-- FILTERS -->
@@ -318,13 +317,6 @@
   <p class="terms-txt">
     Esta página es material publicitario elaborado por Prodyx Agency para Coldwell Banker Art Real Estate. Las propiedades mostradas son una selección representativa y pueden no estar disponibles en el momento de su consulta. Los precios son orientativos y pueden variar. La información completa y actualizada está disponible en <a href="https://www.coldwellbanker.es?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_terms&b=20" target="_blank">coldwellbanker.es</a>. Coldwell Banker Art Real Estate está sujeta a la normativa española e internacional de protección de datos. Al enviar el formulario acepta el tratamiento de sus datos conforme a la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_privacy&b=20" target="_blank">política de privacidad</a>.
   </p>
-</section>
-
-<!-- EXIT -->
-<section class="exit">
-  <div class="exit-lbl" id="exitLbl">¿Quieres explorar más opciones?</div>
-  <button class="exit-btn" id="exitBtn">Ver catálogo completo en la web oficial →</button>
-  <div class="exit-note" id="exitNote">+200 propiedades exclusivas disponibles</div>
 </section>
 
 <!-- FOOTER -->
@@ -375,9 +367,9 @@
       <div class="ff-dot"></div>
       <span id="ffTabLabel">Hablar con un experto</span>
     </div>
-    <span class="ff-arr" id="ffArr">▲</span>
+    <span class="ff-arr open" id="ffArr">▲</span>
   </div>
-  <div class="ff-body" id="ffBody">
+  <div class="ff-body open" id="ffBody">
     <div class="ff-inner">
       <div class="ff-ptag" id="ffPtag">
         <strong id="ffPtagLabel">Propiedad consultada</strong>
@@ -605,7 +597,7 @@
   // ─── FORM STATE ───────────────────────────────────────────────────────────
   let lang = 'ES';
   let step = 1;
-  let ffOpen = false;
+  let ffOpen = true;
   let currentModal = null;
   let propertyInterest = '';
 
@@ -634,9 +626,6 @@
     document.getElementById('viewAllBtn').textContent = t.viewAll;
     document.getElementById('catNote').textContent = t.catNote;
     document.getElementById('catBtn').textContent = t.catBtn;
-    document.getElementById('exitLbl').textContent = t.exitLbl;
-    document.getElementById('exitBtn').textContent = t.exitBtn;
-    document.getElementById('exitNote').textContent = t.exitNote;
     document.getElementById('ffTabLabel').textContent = t.formTab;
     document.getElementById('ffPtagLabel').textContent = t.formProp;
     document.getElementById('step1Lbl').textContent = t.step1;
@@ -854,18 +843,12 @@
   });
 
   // Catalogue buttons
-  document.getElementById('viewAllBtn').addEventListener('click', () => {
-    window.dataLayer.push({event:'catalogue_click', button:'view_all_header'});
-    window.open('https://www.coldwellbanker.es?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=ver_catalogo_btn&b=20','_blank');
-  });
+
   document.getElementById('catBtn').addEventListener('click', () => {
     window.dataLayer.push({event:'catalogue_click', button:'catalogue_bottom'});
     window.open('https://www.coldwellbanker.es?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=catalogo_bottom&b=20','_blank');
   });
-  document.getElementById('exitBtn').addEventListener('click', () => {
-    window.dataLayer.push({event:'catalogue_click', button:'exit_section'});
-    window.open('https://www.coldwellbanker.es?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=exit_btn&b=20','_blank');
-  });
+
 
   // Modal
   document.getElementById('mClose').addEventListener('click', closeModal);
