@@ -188,9 +188,308 @@
       .nav{padding:0 16px}
     }
   </style>
+</head>
+<body>
 
-  <!-- Google Tag Manager -->
-  <script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQT8LNF4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="logo-wrap">
+    <!-- CB Art Real Estate inline SVG logo -->
+    <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" style="flex-shrink:0">
+      <rect width="38" height="38" rx="3" fill="#002169"/>
+      <polygon points="19,7 22,15 31,15 24,20 27,28 19,23 11,28 14,20 7,15 16,15" fill="#C1A062" stroke="none"/>
+      <text x="5" y="36" font-family="serif" font-size="7" font-weight="700" fill="#C1A062" letter-spacing="0.5">ART</text>
+    </svg>
+    <div style="margin-left:8px">
+      <div class="brand-name">Coldwell Banker</div>
+      <div class="brand-sub">Art Real Estate</div>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="lang-wrap">
+      <button class="lang-btn" id="langBtn">
+        <span id="langLabel">ES</span>
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-dd" id="langDd">
+        <div class="lang-opt" data-lang="ES">🇪🇸 Español</div>
+        <div class="lang-opt" data-lang="EN">🇬🇧 English</div>
+        <div class="lang-opt" data-lang="FR">🇫🇷 Français</div>
+        <div class="lang-opt" data-lang="DE">🇩🇪 Deutsch</div>
+      </div>
+    </div>
+    <button class="nav-cta" id="navCta">Hablar con un experto</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-c">
+    <div class="hero-tag">
+      <div class="hero-tag-bar"></div>
+      <span class="hero-tag-t" id="heroTag">Costa del Sol · Propiedades Exclusivas</span>
+    </div>
+    <h1 class="hero-h1" id="heroH1">Propiedades de <em>lujo excepcional</em><br>en la Costa del Sol</h1>
+    <p class="hero-sub" id="heroSub">Selección curada de las mejores residencias en Estepona, Guadalmina, Sotogrande y Marbella. Asesoramiento confidencial y personalizado.</p>
+    <div class="hero-btns">
+      <button class="btn-gold" id="heroCta">Ver propiedades</button>
+      <button class="btn-out" id="heroCtaOut">Hablar con un experto</button>
+    </div>
+  </div>
+  <div class="scroll-arrow" id="scrollArrow">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-i">
+    <div class="trust-v" id="t1v">+15 años</div>
+    <div class="trust-l" id="t1l">de experiencia en lujo</div>
+  </div>
+  <div class="trust-i">
+    <div class="trust-v" id="t2v">Clientes internacionales</div>
+    <div class="trust-l" id="t2l">compradores de 30+ países</div>
+  </div>
+  <div class="trust-i">
+    <div class="trust-v" id="t3v">Servicio confidencial</div>
+    <div class="trust-l" id="t3l">asesoramiento personalizado</div>
+  </div>
+</div>
+
+<!-- PROPERTIES -->
+<section class="props" id="properties">
+  <div class="slbl">
+    <div class="slbl-bar"></div>
+    <span class="slbl-t" id="sectionTag">Selección exclusiva</span>
+  </div>
+  <div class="props-hdr">
+    <div>
+      <div class="props-ttl" id="sectionTitle">Propiedades Destacadas</div>
+      <div class="props-sub" id="sectionSub">Una selección curada de residencias de lujo en Estepona, Guadalmina, Sotogrande y Marbella</div>
+    </div>
+    <button class="cat-lnk" id="viewAllBtn">Ver catálogo completo →</button>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <select class="filter-sel" id="fltZona">
+      <option value="">— Todas las zonas —</option>
+    </select>
+    <select class="filter-sel" id="fltPrecio">
+      <option value="">— Cualquier precio —</option>
+      <option value="0-500000">Hasta 500.000 €</option>
+      <option value="500000-1000000">500.000 – 1.000.000 €</option>
+      <option value="1000000-2000000">1.000.000 – 2.000.000 €</option>
+      <option value="2000000-5000000">2.000.000 – 5.000.000 €</option>
+      <option value="5000000-99999999">Más de 5.000.000 €</option>
+    </select>
+    <select class="filter-sel" id="fltM2">
+      <option value="">— Cualquier tamaño —</option>
+      <option value="0-150">Hasta 150 m²</option>
+      <option value="150-300">150 – 300 m²</option>
+      <option value="300-500">300 – 500 m²</option>
+      <option value="500-99999">Más de 500 m²</option>
+    </select>
+    <button class="filter-clear" id="filterClear">✕ Limpiar</button>
+    <span class="filter-count" id="filterCount"></span>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid" id="propertyGrid"></div>
+
+  <!-- CATALOGUE BOTTOM -->
+  <div class="cat-bot">
+    <div class="cat-bot-note" id="catNote">+200 propiedades exclusivas disponibles en la web oficial</div>
+    <button class="cat-bot-btn" id="catBtn">Ver catálogo completo en la web oficial →</button>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section class="terms">
+  <div class="terms-ttl">Aviso legal</div>
+  <p class="terms-txt">
+    Esta página es material publicitario elaborado por Prodyx Agency para Coldwell Banker Art Real Estate. Las propiedades mostradas son una selección representativa y pueden no estar disponibles en el momento de su consulta. Los precios son orientativos y pueden variar. La información completa y actualizada está disponible en <a href="https://www.coldwellbanker.es?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_terms&b=20" target="_blank">coldwellbanker.es</a>. Coldwell Banker Art Real Estate está sujeta a la normativa española e internacional de protección de datos. Al enviar el formulario acepta el tratamiento de sus datos conforme a la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_privacy&b=20" target="_blank">política de privacidad</a>.
+  </p>
+</section>
+
+<!-- EXIT -->
+<section class="exit">
+  <div class="exit-lbl" id="exitLbl">¿Quieres explorar más opciones?</div>
+  <button class="exit-btn" id="exitBtn">Ver catálogo completo en la web oficial →</button>
+  <div class="exit-note" id="exitNote">+200 propiedades exclusivas disponibles</div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span class="footer-c">© 2025 Coldwell Banker Art Real Estate · Costa del Sol</span>
+  <div class="footer-links">
+    <a class="footer-lnk" href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_legal&b=20" target="_blank">Aviso legal</a>
+    <a class="footer-lnk" href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_privacy&b=20" target="_blank">Privacidad</a>
+    <a class="footer-lnk" href="https://www.coldwellbanker.es/politica-de-cookies?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_cookies&b=20" target="_blank">Cookies</a>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="mbd" id="modal">
+  <div class="mbox">
+    <div class="mimg">
+      <img id="mImg" src="" alt="" />
+      <div class="mig"></div>
+      <button class="mclose" id="mClose">✕</button>
+      <div class="minfo">
+        <div class="mzone" id="mZone"></div>
+        <div class="mtitle" id="mTitle"></div>
+      </div>
+    </div>
+    <div class="mcont">
+      <div class="mprow">
+        <div class="mprice" id="mPrice"></div>
+        <div class="mstats">
+          <div><div class="msv" id="mBeds"></div><div class="msl" id="mBedsL">habs.</div></div>
+          <div><div class="msv" id="mBaths"></div><div class="msl" id="mBathsL">baños</div></div>
+          <div><div class="msv" id="mM2"></div><div class="msl">m²</div></div>
+        </div>
+      </div>
+      <p class="mdesc" id="mDesc"></p>
+      <div class="mfeats" id="mFeats"></div>
+      <div class="mctas">
+        <button class="mcta-p" id="mAskBtn">Solicitar información</button>
+        <button class="mcta-o" id="mViewBtn">Ver detalles →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING FORM -->
+<div class="ff" id="ff">
+  <div class="ff-tab" id="ffTab">
+    <div style="display:flex;align-items:center;gap:8px">
+      <div class="ff-dot"></div>
+      <span id="ffTabLabel">Hablar con un experto</span>
+    </div>
+    <span class="ff-arr" id="ffArr">▲</span>
+  </div>
+  <div class="ff-body" id="ffBody">
+    <div class="ff-inner">
+      <div class="ff-ptag" id="ffPtag">
+        <strong id="ffPtagLabel">Propiedad consultada</strong>
+        <span id="ffPtagVal"></span>
+      </div>
+      <div class="ff-steps">
+        <div class="ff-st" id="st1"></div>
+        <div class="ff-st" id="st2"></div>
+        <div class="ff-st" id="st3"></div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="step-panel active" id="panel1">
+        <div class="ff-step-lbl" id="step1Lbl">Paso 1 de 3 — Tus datos</div>
+        <label class="fflbl" id="nameLbl">NOMBRE</label>
+        <input class="ffinp" id="fname" type="text" placeholder="Ej. John Smith" />
+        <div class="err-msg" id="errName">Este campo es obligatorio</div>
+        <label class="fflbl" id="phoneLbl">TELÉFONO</label>
+        <div class="ff-row2">
+          <select class="ffinp" id="fcode">
+            <option value="+34">🇪🇸 +34</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+33">🇫🇷 +33</option>
+            <option value="+49">🇩🇪 +49</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+31">🇳🇱 +31</option>
+            <option value="+32">🇧🇪 +32</option>
+            <option value="+41">🇨🇭 +41</option>
+            <option value="+46">🇸🇪 +46</option>
+            <option value="+47">🇳🇴 +47</option>
+          </select>
+          <input class="ffinp" id="fphone" type="tel" placeholder="600 000 000" />
+        </div>
+        <div class="ff-nav">
+          <div></div>
+          <button class="ff-next" id="next1Btn">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step-panel" id="panel2">
+        <div class="ff-step-lbl" id="step2Lbl">Paso 2 de 3 — Tu búsqueda</div>
+        <label class="fflbl" id="zoneLbl">ZONA DE INTERÉS</label>
+        <select class="ffinp" id="fzone">
+          <option value="">— Seleccionar zona —</option>
+          <option value="Estepona">Estepona</option>
+          <option value="Guadalmina">Guadalmina</option>
+          <option value="Sotogrande">Sotogrande</option>
+          <option value="Marbella">Marbella</option>
+          <option value="Benahavís">Benahavís</option>
+          <option value="Puerto Banús">Puerto Banús</option>
+          <option value="Indiferente">Indiferente</option>
+        </select>
+        <label class="fflbl" id="budgetLbl">PRESUPUESTO APROXIMADO</label>
+        <select class="ffinp" id="fbudget">
+          <option value="">— Seleccionar —</option>
+          <option value="Hasta 500.000€">Hasta 500.000 €</option>
+          <option value="500.000€ – 1.000.000€">500.000 – 1.000.000 €</option>
+          <option value="1.000.000€ – 2.000.000€">1.000.000 – 2.000.000 €</option>
+          <option value="2.000.000€ – 5.000.000€">2.000.000 – 5.000.000 €</option>
+          <option value="Más de 5.000.000€">Más de 5.000.000 €</option>
+        </select>
+        <label class="fflbl" id="timelineLbl">TIEMPO ESTIMADO DE COMPRA *</label>
+        <select class="ffinp" id="ftimeline">
+          <option value="">— Seleccionar —</option>
+          <option value="Compra inmediata">Compra inmediata</option>
+          <option value="1 a 3 meses">1 a 3 meses</option>
+          <option value="4 a 6 meses">4 a 6 meses</option>
+          <option value="7 a 12 meses">7 a 12 meses</option>
+        </select>
+        <div class="err-msg" id="errTime">Este campo es obligatorio</div>
+        <div class="ff-nav">
+          <button class="ff-back" id="back2Btn">← Atrás</button>
+          <button class="ff-next" id="next2Btn">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step-panel" id="panel3">
+        <div class="ff-step-lbl" id="step3Lbl">Paso 3 de 3 — Confirmación</div>
+        <label class="fflbl" id="emailLbl">EMAIL *</label>
+        <input class="ffinp" id="femail" type="email" placeholder="your@email.com" />
+        <div class="ff-legal">
+          <input type="checkbox" id="flegals" />
+          <label class="ff-legal-t" for="flegals" id="legalTxt">He leído y acepto el <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20" target="_blank">aviso legal</a> y la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20" target="_blank">política de privacidad</a></label>
+        </div>
+        <div class="err-msg" id="errLegal">Debes aceptar los términos para continuar</div>
+        <div class="ff-nav">
+          <button class="ff-back" id="back3Btn">← Atrás</button>
+          <button class="ff-next" id="sendBtn">Enviar</button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="step-panel" id="panelOk">
+        <div class="ff-ok">
+          <div class="ff-ok-icon">✓</div>
+          <div class="ff-ok-t" id="okTitle">¡Perfecto!</div>
+          <div class="ff-ok-s" id="okSub">Te contactaremos en menos de 2 horas.<br>Revisá también tu email.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16749711169');
+
   // ─── GOOGLE SHEETS CONFIG ──────────────────────────────────────────────────
   const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS-2RQPtIkaRWD_eJ5t5gxTFrgRK2VA3ThPUojBSz8hZkjUrxH0xO9mypXDlGq3OoGYlatqbZNrvHMW/pub?gid=0&single=true&output=csv';
 
