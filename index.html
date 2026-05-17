@@ -8,15 +8,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
- 
+
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NQT8LNF4');</script>
   <!-- End Google Tag Manager -->
- 
+
   <style>
     *{box-sizing:border-box;margin:0;padding:0}
     body{background:#020E1E;font-family:'Roboto',Arial,sans-serif;color:#fff;width:100%}
- 
+
     /* NAV */
     .nav{background:#002169;border-bottom:1px solid rgba(193,160,98,0.18);padding:0 28px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
     .logo-wrap{display:flex;align-items:center;gap:10px}
@@ -33,7 +33,7 @@
     .lang-opt:last-child{border-bottom:none}
     .lang-opt:hover,.lang-opt.act{background:rgba(193,160,98,0.12);color:#C1A062}
     .nav-cta{padding:9px 20px;background:#C1A062;color:#002169;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;border:none;cursor:pointer;font-family:'Roboto',sans-serif}
- 
+
     /* HERO */
     .hero{position:relative;height:340px;display:flex;align-items:center;overflow:hidden}
     .hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1400&q=80');background-size:cover;background-position:center 40%;filter:brightness(.28) saturate(0.9)}
@@ -52,14 +52,14 @@
     .scroll-arrow{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(0,33,105,.5);display:flex;align-items:center;justify-content:center;cursor:pointer;animation:bob 2s ease-in-out infinite}
     @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(4px)}}
     .scroll-arrow svg{width:14px;height:14px;stroke:#C1A062;fill:none;stroke-width:2.5}
- 
+
     /* TRUST */
     .trust{background:#C1A062;display:grid;grid-template-columns:repeat(3,1fr)}
     .trust-i{padding:16px 14px;text-align:center;border-right:1px solid rgba(0,33,105,.18)}
     .trust-i:last-child{border-right:none}
     .trust-v{font-size:13px;font-family:'Playfair Display',serif;font-weight:600;color:#002169;margin-bottom:2px}
     .trust-l{font-size:8px;color:rgba(0,33,105,.62);letter-spacing:.07em;text-transform:uppercase;font-weight:600}
- 
+
     /* PROPERTIES */
     .props{padding:48px 28px 44px;background:#020E1E}
     .slbl{display:flex;align-items:center;gap:10px;margin-bottom:12px}
@@ -88,13 +88,13 @@
     .cat-bot{text-align:center;margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.05)}
     .cat-bot-note{font-size:10px;color:rgba(255,255,255,.22);margin-bottom:10px}
     .cat-bot-btn{padding:11px 26px;background:#C1A062;color:#002169;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;border:none;cursor:pointer;font-family:'Roboto',sans-serif}
- 
+
     /* TERMS */
     .terms{background:#0a1929;border-top:1px solid rgba(193,160,98,.08);padding:24px 28px}
     .terms-ttl{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px}
     .terms-txt{font-size:10px;color:rgba(255,255,255,.25);line-height:1.75;max-width:900px}
     .terms-txt a{color:rgba(193,160,98,.65);text-decoration:underline}
- 
+
     /* EXIT + FOOTER */
     .exit{padding:22px 28px;background:#020E1E;border-top:1px solid rgba(193,160,98,.06);text-align:center}
     .exit-lbl{font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
@@ -104,7 +104,7 @@
     .footer-c{font-size:9px;color:rgba(255,255,255,.2)}
     .footer-links{display:flex;gap:14px}
     .footer-lnk{font-size:9px;color:rgba(255,255,255,.22);cursor:pointer;text-decoration:underline}
- 
+
     /* FLOATING FORM */
     .ff{position:fixed;bottom:0;right:22px;z-index:100;width:310px}
     .ff-tab{background:#002169;color:#fff;padding:10px 16px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-family:'Roboto',sans-serif;border-top:2px solid #C1A062}
@@ -144,7 +144,7 @@
     .ff-ok-s{font-size:10px;color:rgba(255,255,255,.38);line-height:1.55}
     .step-panel{display:none}
     .step-panel.active{display:block}
- 
+
     /* MODAL */
     .mbd{display:none;position:fixed;inset:0;z-index:200;background:rgba(1,13,30,.93);align-items:center;justify-content:center;padding:16px}
     .mbd.open{display:flex}
@@ -168,7 +168,7 @@
     .mctas{display:grid;grid-template-columns:1fr 1fr;gap:8px}
     .mcta-p{padding:11px;background:#C1A062;color:#002169;border:none;border-radius:2px;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'Roboto',sans-serif}
     .mcta-o{padding:11px;background:transparent;color:#C1A062;border:1px solid rgba(193,160,98,.45);border-radius:2px;font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:'Roboto',sans-serif}
- 
+
     /* FILTER BAR */
     .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;align-items:center}
     .filter-sel{padding:7px 12px;background:rgba(255,255,255,.05);border:1px solid rgba(193,160,98,.28);border-radius:2px;color:rgba(255,255,255,.75);font-size:10px;font-weight:500;letter-spacing:.06em;font-family:'Roboto',sans-serif;cursor:pointer;outline:none;min-width:160px}
@@ -176,15 +176,15 @@
     .filter-clear{padding:7px 14px;background:transparent;border:1px solid rgba(255,255,255,.12);border-radius:2px;color:rgba(255,255,255,.35);font-size:10px;font-weight:500;letter-spacing:.06em;font-family:'Roboto',sans-serif;cursor:pointer;display:none}
     .filter-clear.show{display:block}
     .filter-count{font-size:9px;color:rgba(255,255,255,.3);margin-left:auto;align-self:center;letter-spacing:.06em}
- 
+
     /* LOADING SKELETON */
     .skeleton{background:linear-gradient(90deg,#0a1929 25%,#0d2040 50%,#0a1929 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:3px}
     @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
     .skel-card{background:#0A1929;border-radius:3px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
     .skel-img{height:155px}.skel-body{padding:12px}.skel-line{height:10px;border-radius:2px;margin-bottom:8px}
     .no-results{text-align:center;padding:40px 20px;color:rgba(255,255,255,.3);font-size:12px;grid-column:1/-1}
- 
- 
+
+
     /* MODAL FORM */
     .m-form-section{display:none;margin-top:14px;padding-top:14px;border-top:1px solid rgba(193,160,98,.15)}
     .m-form-section.active{display:block}
@@ -193,7 +193,7 @@
     .m-form-ok-icon{font-size:26px;color:#C1A062;margin-bottom:6px}
     .m-form-ok-t{font-family:'Playfair Display',serif;font-size:14px;color:#fff;margin-bottom:4px}
     .m-form-ok-s{font-size:10px;color:rgba(255,255,255,.38);line-height:1.55}
- 
+
     /* RESPONSIVE */
     @media(max-width:768px){
       .grid{grid-template-columns:1fr}
@@ -204,11 +204,11 @@
   </style>
 </head>
 <body>
- 
+
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQT8LNF4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
- 
+
 <!-- NAV -->
 <nav class="nav">
   <div class="logo-wrap">
@@ -234,7 +234,7 @@
     <button class="nav-cta" id="navCta">Agendar llamada con un experto</button>
   </div>
 </nav>
- 
+
 <!-- HERO -->
 <section class="hero">
   <div class="hero-bg"></div>
@@ -256,7 +256,7 @@
     <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
   </div>
 </section>
- 
+
 <!-- TRUST BAR -->
 <div class="trust">
   <div class="trust-i">
@@ -272,7 +272,7 @@
     <div class="trust-l" id="t3l">asesoramiento personalizado</div>
   </div>
 </div>
- 
+
 <!-- PROPERTIES -->
 <section class="props" id="properties">
   <div class="slbl">
@@ -285,7 +285,7 @@
       <div class="props-sub" id="sectionSub">Una selección curada de residencias de lujo en Estepona, Guadalmina, Sotogrande y Marbella</div>
     </div>
   </div>
- 
+
   <!-- FILTERS -->
   <div class="filters">
     <select class="filter-sel" id="fltZona">
@@ -309,17 +309,17 @@
     <button class="filter-clear" id="filterClear">✕ Limpiar</button>
     <span class="filter-count" id="filterCount"></span>
   </div>
- 
+
   <!-- GRID -->
   <div class="grid" id="propertyGrid"></div>
- 
+
   <!-- CATALOGUE BOTTOM -->
   <div class="cat-bot">
     <div class="cat-bot-note" id="catNote">+200 propiedades exclusivas disponibles en la web oficial</div>
     <button class="cat-bot-btn" id="catBtn">Ver catálogo completo en la web oficial →</button>
   </div>
 </section>
- 
+
 <!-- TERMS -->
 <section class="terms">
   <div class="terms-ttl">Aviso legal</div>
@@ -327,7 +327,7 @@
     Esta página es material publicitario elaborado por Prodyx Agency para Coldwell Banker Art Real Estate. Las propiedades mostradas son una selección representativa y pueden no estar disponibles en el momento de su consulta. Los precios son orientativos y pueden variar. La información completa y actualizada está disponible en <a href="https://www.coldwellbanker.es?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_terms&b=20" target="_blank">coldwellbanker.es</a>. Coldwell Banker Art Real Estate está sujeta a la normativa española e internacional de protección de datos. Al enviar el formulario acepta el tratamiento de sus datos conforme a la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_privacy&b=20" target="_blank">política de privacidad</a>.
   </p>
 </section>
- 
+
 <!-- FOOTER -->
 <footer class="footer">
   <span class="footer-c">© 2025 Coldwell Banker Art Real Estate · Costa del Sol</span>
@@ -337,7 +337,7 @@
     <a class="footer-lnk" href="https://www.coldwellbanker.es/politica-de-cookies?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_cookies&b=20" target="_blank">Cookies</a>
   </div>
 </footer>
- 
+
 <!-- MODAL -->
 <div class="mbd" id="modal">
   <div class="mbox">
@@ -365,7 +365,7 @@
         <button class="mcta-p" id="mAskBtn">Solicitar información</button>
         <button class="mcta-o" id="mViewBtn">Ver detalles →</button>
       </div>
- 
+
       <!-- MODAL INLINE FORM -->
       <div class="m-form-section" id="mFormSection">
         <div class="m-form-ttl">Solicitar información</div>
@@ -409,7 +409,7 @@
     </div>
   </div>
 </div>
- 
+
 <!-- FLOATING FORM -->
 <div class="ff" id="ff">
   <div class="ff-tab" id="ffTab">
@@ -430,7 +430,7 @@
         <div class="ff-st" id="st2"></div>
         <div class="ff-st" id="st3"></div>
       </div>
- 
+
       <!-- STEP 1 -->
       <div class="step-panel active" id="panel1">
         <div class="ff-step-lbl" id="step1Lbl">Paso 1 de 3 — Tus datos</div>
@@ -458,7 +458,7 @@
           <button class="ff-next" id="next1Btn">Siguiente →</button>
         </div>
       </div>
- 
+
       <!-- STEP 2 -->
       <div class="step-panel" id="panel2">
         <div class="ff-step-lbl" id="step2Lbl">Paso 2 de 3 — Tu búsqueda</div>
@@ -496,7 +496,7 @@
           <button class="ff-next" id="next2Btn">Siguiente →</button>
         </div>
       </div>
- 
+
       <!-- STEP 3 -->
       <div class="step-panel" id="panel3">
         <div class="ff-step-lbl" id="step3Lbl">Paso 3 de 3 — Confirmación</div>
@@ -512,7 +512,7 @@
           <button class="ff-next" id="sendBtn">Enviar</button>
         </div>
       </div>
- 
+
       <!-- SUCCESS -->
       <div class="step-panel" id="panelOk">
         <div class="ff-ok">
@@ -521,23 +521,23 @@
           <div class="ff-ok-s" id="okSub">Te contactaremos en menos de 2 horas.<br>Revisá también tu email.</div>
         </div>
       </div>
- 
+
     </div>
   </div>
 </div>
- 
+
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
   gtag('config', 'AW-16749711169');
- 
+
   // ─── GOOGLE SHEETS CONFIG ─────────────────────────────────────────────────
   const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS-2RQPtIkaRWD_eJ5t5gxTFrgRK2VA3ThPUojBSz8hZkjUrxH0xO9mypXDlGq3OoGYlatqbZNrvHMW/pub?gid=0&single=true&output=csv';
- 
+
   // ─── WEBHOOK ──────────────────────────────────────────────────────────────
-  const WEBHOOK_URL = 'https://TU_INSTANCIA_N8N/webhook/cb-art-contacto';
- 
+  const WEBHOOK_URL = 'https://prodyx-agency.app.n8n.cloud/webhook/720b7607-65a9-4416-8412-8bce55346574';
+
   // ─── STATE ────────────────────────────────────────────────────────────────
   let ALL_PROPERTIES = [];
   let FILTERED = [];
@@ -546,7 +546,7 @@
   let ffOpen = true;
   let currentModal = null;
   let propertyInterest = '';
- 
+
   // ─── TRANSLATIONS ─────────────────────────────────────────────────────────
   const T = {
     ES:{ heroTag:'Costa del Sol · Propiedades Exclusivas', h1:'Propiedades de <em>lujo excepcional</em><br>en la Costa del Sol', heroSub:'Selección curada de las mejores residencias en Estepona, Guadalmina, Sotogrande y Marbella. Asesoramiento confidencial y personalizado.', heroCta:'Ver propiedades', heroCtaOut:'Agendar llamada con un experto', t1v:'+15 años', t1l:'de experiencia en lujo', t2v:'Clientes internacionales', t2l:'compradores de 30+ países', t3v:'Servicio confidencial', t3l:'asesoramiento personalizado', sectionTag:'Selección exclusiva', sectionTitle:'Propiedades Destacadas', sectionSub:'Una selección curada de residencias de lujo en Estepona, Guadalmina, Sotogrande y Marbella', viewAll:'Ver catálogo completo →', askInfo:'Solicitar información', catNote:'+200 propiedades exclusivas disponibles en la web oficial', catBtn:'Ver catálogo completo en la web oficial →', formTab:'Recibir más información sobre las propiedades', formProp:'Propiedad consultada', step1:'Paso 1 de 3 — Tus datos', step2:'Paso 2 de 3 — Tu búsqueda', step3:'Paso 3 de 3 — Confirmación', nameLbl:'NOMBRE', namePh:'Ej. John Smith', phoneLbl:'TELÉFONO', zoneLbl:'ZONA DE INTERÉS', zonePh:'— Seleccionar zona —', budgetLbl:'PRESUPUESTO APROXIMADO', budgetPh:'— Seleccionar —', timelineLbl:'TIEMPO ESTIMADO DE COMPRA *', timelinePh:'— Seleccionar —', emailLbl:'EMAIL *', emailPh:'your@email.com', legal:'He leído y acepto el <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20" target="_blank">aviso legal</a> y la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20" target="_blank">política de privacidad</a>', next:'Siguiente →', back:'← Atrás', send:'Enviar', errTime:'Este campo es obligatorio', errLegal:'Debes aceptar los términos para continuar', okTitle:'¡Perfecto!', okSub:'Te contactaremos en menos de 2 horas.<br>Revisá también tu email.', exitLbl:'¿Quieres explorar más opciones?', exitBtn:'Ver catálogo completo en la web oficial →', exitNote:'+200 propiedades exclusivas disponibles', beds:'habs.', baths:'baños', viewDetails:'Ver detalles →', tl:['Compra inmediata','1 a 3 meses','4 a 6 meses','7 a 12 meses'] },
@@ -554,7 +554,7 @@
     FR:{ heroTag:'Costa del Sol · Propriétés Exclusives', h1:'Propriétés de <em>luxe exceptionnel</em><br>sur la Costa del Sol', heroSub:'Sélection soignée des meilleures résidences à Marbella, Benahavís et Estepona. Conseil confidentiel et personnalisé.', heroCta:'Voir les propriétés', heroCtaOut:'Planifier un appel avec un expert', t1v:'+15 ans', t1l:"d'expérience dans le luxe", t2v:'Clients internationaux', t2l:'acheteurs de 30+ pays', t3v:'Service confidentiel', t3l:'conseil personnalisé', sectionTag:'Sélection exclusive', sectionTitle:'Propriétés en vedette', sectionSub:'Une sélection soignée des meilleures maisons de luxe disponibles sur la Costa del Sol', viewAll:'Voir le catalogue complet →', askInfo:'Demander des informations', catNote:'+200 propriétés exclusives sur le site officiel', catBtn:'Voir le catalogue complet →', formTab:'Recevoir plus d\'informations sur les propriétés', formProp:'Propriété consultée', step1:'Étape 1 sur 3 — Vos données', step2:'Étape 2 sur 3 — Votre recherche', step3:'Étape 3 sur 3 — Confirmation', nameLbl:'NOM COMPLET', namePh:'Ex. Jean Dupont', phoneLbl:'TÉLÉPHONE', zoneLbl:"ZONE D'INTÉRÊT", zonePh:'— Sélectionner —', budgetLbl:'BUDGET APPROXIMATIF', budgetPh:'— Sélectionner —', timelineLbl:"DÉLAI D'ACHAT ESTIMÉ *", timelinePh:'— Sélectionner —', emailLbl:'EMAIL *', emailPh:'votre@email.com', legal:"J'ai lu et j'accepte les <a href='https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20' target='_blank'>mentions légales</a> et la <a href='https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20' target='_blank'>politique de confidentialité</a>", next:'Suivant →', back:'← Retour', send:'Envoyer', errTime:'Ce champ est obligatoire', errLegal:'Vous devez accepter les conditions', okTitle:'Parfait !', okSub:'Nous vous contacterons dans moins de 2 heures.<br>Vérifiez aussi votre email.', exitLbl:'Vous souhaitez explorer plus ?', exitBtn:'Voir le catalogue complet →', exitNote:'+200 propriétés exclusives disponibles', beds:'ch.', baths:'sdb.', viewDetails:'Voir les détails →', tl:['Achat immédiat','1 à 3 mois','4 à 6 mois','7 à 12 mois'] },
     DE:{ heroTag:'Costa del Sol · Exklusive Immobilien', h1:'Außergewöhnliche <em>Luxusimmobilien</em><br>an der Costa del Sol', heroSub:'Kuratierte Auswahl der feinsten Residenzen in Marbella, Benahavís und Estepona. Vertrauliche und persönliche Beratung.', heroCta:'Immobilien ansehen', heroCtaOut:'Anruf mit einem Experten vereinbaren', t1v:'+15 Jahre', t1l:'Luxuserfahrung', t2v:'Internationale Kunden', t2l:'Käufer aus 30+ Ländern', t3v:'Vertraulicher Service', t3l:'persönliche Beratung', sectionTag:'Exklusive Auswahl', sectionTitle:'Ausgewählte Immobilien', sectionSub:'Eine kuratierte Auswahl der besten Luxushäuser an der Costa del Sol', viewAll:'Vollständigen Katalog ansehen →', askInfo:'Informationen anfragen', catNote:'+200 exklusive Immobilien auf der offiziellen Website', catBtn:'Vollständigen Katalog ansehen →', formTab:'Mehr Informationen zu Immobilien erhalten', formProp:'Angefragte Immobilie', step1:'Schritt 1 von 3 — Ihre Daten', step2:'Schritt 2 von 3 — Ihre Suche', step3:'Schritt 3 von 3 — Bestätigung', nameLbl:'VOLLSTÄNDIGER NAME', namePh:'z.B. Hans Müller', phoneLbl:'TELEFON', zoneLbl:'INTERESSENGEBIET', zonePh:'— Gebiet auswählen —', budgetLbl:'UNGEFÄHRES BUDGET', budgetPh:'— Auswählen —', timelineLbl:'GESCHÄTZTE KAUFZEIT *', timelinePh:'— Auswählen —', emailLbl:'E-MAIL *', emailPh:'ihre@email.com', legal:"Ich habe die <a href='https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20' target='_blank'>rechtlichen Hinweise</a> und die <a href='https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20' target='_blank'>Datenschutzrichtlinie</a> gelesen und akzeptiert.", next:'Weiter →', back:'← Zurück', send:'Senden', errTime:'Dieses Feld ist erforderlich', errLegal:'Sie müssen die Bedingungen akzeptieren', okTitle:'Perfekt!', okSub:'Wir melden uns in weniger als 2 Stunden.<br>Bitte prüfen Sie auch Ihre E-Mail.', exitLbl:'Möchten Sie mehr entdecken?', exitBtn:'Vollständigen Katalog ansehen →', exitNote:'+200 exklusive Immobilien verfügbar', beds:'Zi.', baths:'Bad.', viewDetails:'Details ansehen →', tl:['Sofortkauf','1 bis 3 Monate','4 bis 6 Monate','7 bis 12 Monate'] },
   };
- 
+
   // ─── CSV PARSER ───────────────────────────────────────────────────────────
   function parseCSV(text) {
     const rows = [];
@@ -569,7 +569,7 @@
     }
     return rows;
   }
- 
+
   function splitCSVLine(line) {
     const result = [];
     let cur = '', inQ = false;
@@ -582,7 +582,7 @@
     result.push(cur);
     return result;
   }
- 
+
   // ─── LOAD PROPERTIES FROM SHEET ──────────────────────────────────────────
   async function loadProperties() {
     showSkeleton();
@@ -603,7 +603,7 @@
       document.getElementById('propertyGrid').innerHTML = '<div class="no-results">Error cargando propiedades. Recargá la página.</div>';
     }
   }
- 
+
   function showSkeleton() {
     document.getElementById('propertyGrid').innerHTML = [1,2,3].map(() => `
       <div class="skel-card">
@@ -615,7 +615,7 @@
         </div>
       </div>`).join('');
   }
- 
+
   function populateZoneFilter() {
     const zones = [...new Set(ALL_PROPERTIES.map(p => p.zona).filter(Boolean))].sort();
     const sel = document.getElementById('fltZona');
@@ -627,15 +627,15 @@
       sel.appendChild(o);
     });
   }
- 
+
   function applyFilters() {
     const zona = document.getElementById('fltZona').value;
     const precio = document.getElementById('fltPrecio').value;
     const m2 = document.getElementById('fltM2').value;
- 
+
     const hasFilter = zona || precio || m2;
     document.getElementById('filterClear').classList.toggle('show', !!hasFilter);
- 
+
     FILTERED = ALL_PROPERTIES.filter(p => {
       if (zona && p.zona !== zona) return false;
       if (precio) {
@@ -650,12 +650,12 @@
       }
       return true;
     });
- 
+
     const count = FILTERED.length;
     document.getElementById('filterCount').textContent = count > 0 ? count + ' propiedad' + (count !== 1 ? 'es' : '') : '';
     renderCards();
   }
- 
+
   // ─── RENDER CARDS ─────────────────────────────────────────────────────────
   function renderCards() {
     const t = T[lang];
@@ -683,7 +683,7 @@
           <button class="cbtn">${t.askInfo}</button>
         </div>
       </div>`).join('');
- 
+
     // card click → modal
     grid.querySelectorAll('.card').forEach(card => {
       card.addEventListener('click', () => {
@@ -692,7 +692,7 @@
       });
     });
   }
- 
+
   // ─── MODAL ────────────────────────────────────────────────────────────────
   function showModal(p) {
     const t = T[lang];
@@ -711,7 +711,7 @@
     document.getElementById('mDesc').textContent = p.descripcion || '';
     document.getElementById('mAskBtn').textContent = t.askInfo;
     document.getElementById('mViewBtn').textContent = t.viewDetails;
- 
+
     const feats = document.getElementById('mFeats');
     feats.innerHTML = '';
     if (p.caracteristicas) {
@@ -724,7 +724,7 @@
         }
       });
     }
- 
+
     document.getElementById('mViewBtn').onclick = () => {
       if (window.dataLayer) dataLayer.push({ event: 'click_ver_detalles', property_name: p.titulo, property_zone: p.zona, page_location: window.location.href });
       if (p.url) window.open(p.url, '_blank');
@@ -744,12 +744,12 @@
       document.getElementById('mfLegal').checked = false;
       document.getElementById('mfErr').style.display = 'none';
     };
- 
+
     document.getElementById('modal').style.display = 'flex';
     document.body.style.overflow = 'hidden';
     if (window.dataLayer) dataLayer.push({ event: 'view_property', property_name: p.titulo, property_zone: p.zona });
   }
- 
+
   function closeModal() {
     document.getElementById('modal').style.display = 'none';
     document.body.style.overflow = '';
@@ -758,7 +758,7 @@
     document.getElementById('mFormSection').classList.remove('active');
     document.getElementById('mctas').style.display = '';
   }
- 
+
   function openForm(propName) {
     propertyInterest = propName || '';
     const ptag = document.getElementById('ffPtag');
@@ -776,7 +776,7 @@
       document.getElementById('ff').scrollIntoView({ behavior: 'smooth', block: 'end' });
     }, 100);
   }
- 
+
   // ─── FORM STEPS ───────────────────────────────────────────────────────────
   function goStep(n) {
     document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
@@ -786,7 +786,7 @@
       document.getElementById('st' + i).classList.toggle('done', i <= n);
     });
   }
- 
+
   function validateStep1() {
     const name = document.getElementById('fname').value.trim();
     const phone = document.getElementById('fphone').value.trim();
@@ -794,14 +794,14 @@
     document.getElementById('errName').style.display = ok ? 'none' : 'block';
     return ok;
   }
- 
+
   function validateStep2() {
     const timeline = document.getElementById('ftimeline').value;
     const ok = !!timeline;
     document.getElementById('errTime').style.display = ok ? 'none' : 'block';
     return ok;
   }
- 
+
   function validateStep3() {
     const email = document.getElementById('femail').value.trim();
     const legal = document.getElementById('flegals').checked;
@@ -809,13 +809,13 @@
     document.getElementById('errLegal').style.display = (email && !legal) ? 'block' : 'none';
     return ok;
   }
- 
+
   async function sendForm() {
     if (!validateStep3()) return;
     const btn = document.getElementById('sendBtn');
     btn.disabled = true;
     btn.textContent = '…';
- 
+
     const payload = {
       nombre: document.getElementById('fname').value.trim(),
       telefono: (document.getElementById('fcode').value || '+34') + ' ' + document.getElementById('fphone').value.trim(),
@@ -828,9 +828,9 @@
       fecha: new Date().toISOString(),
       fuente: window.location.href
     };
- 
+
     if (window.dataLayer) { dataLayer.push({ event: 'generate_lead', lead_email: payload.email, lead_zone: payload.zona, page_location: window.location.href }); dataLayer.push({ event: 'form_submit', page_location: window.location.href }); }
- 
+
     try {
       await fetch(WEBHOOK_URL, {
         method: 'POST',
@@ -840,13 +840,13 @@
     } catch(e) {
       console.warn('Webhook error:', e.message);
     }
- 
+
     // Show success regardless
     document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
     document.getElementById('panelOk').classList.add('active');
     document.querySelectorAll('.ff-st').forEach(s => s.classList.add('done'));
   }
- 
+
   // ─── LANGUAGE ─────────────────────────────────────────────────────────────
   function applyLang(l) {
     lang = l;
@@ -899,10 +899,10 @@
     if (ffPtag) ffPtag.querySelector('strong').textContent = t.formProp;
     renderCards();
   }
- 
+
   // ─── INIT ─────────────────────────────────────────────────────────────────
   document.addEventListener('DOMContentLoaded', () => {
- 
+
     // Language switcher
     document.getElementById('langBtn').addEventListener('click', e => {
       e.stopPropagation();
@@ -920,14 +920,14 @@
       document.getElementById('langBtn').classList.remove('open');
       document.getElementById('langDd').classList.remove('open');
     });
- 
+
     // Floating form toggle
     document.getElementById('ffTab').addEventListener('click', () => {
       ffOpen = !ffOpen;
       document.getElementById('ffBody').classList.toggle('open', ffOpen);
       document.getElementById('ffArr').classList.toggle('open', ffOpen);
     });
- 
+
     // Nav CTA & hero buttons — abren cal.com para agendar llamada
     const CAL_LINK = 'prodyx-agency-zpcsdn/15min';
     document.getElementById('navCta').addEventListener('click', () => {
@@ -944,20 +944,20 @@
     document.getElementById('scrollArrow').addEventListener('click', () => {
       document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
     });
- 
+
     // Catalogue button
     document.getElementById('catBtn').addEventListener('click', () => {
       window.open('https://www.coldwellbanker.es/en/buy/search-results?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=catbtn&b=20', '_blank');
       if (window.dataLayer) dataLayer.push({ event: 'click_catalogo_oficial', page_location: window.location.href });
     });
- 
+
     // Form navigation
     document.getElementById('next1Btn').addEventListener('click', () => { if (validateStep1()) { goStep(2); if (window.dataLayer) dataLayer.push({ event: 'form_step_1_complete', page_location: window.location.href }); } });
     document.getElementById('next2Btn').addEventListener('click', () => { if (validateStep2()) { goStep(3); if (window.dataLayer) dataLayer.push({ event: 'form_step_2_complete', page_location: window.location.href }); } });
     document.getElementById('back2Btn').addEventListener('click', () => goStep(1));
     document.getElementById('back3Btn').addEventListener('click', () => goStep(2));
     document.getElementById('sendBtn').addEventListener('click', sendForm);
- 
+
     // Filters
     document.getElementById('fltZona').addEventListener('change', applyFilters);
     document.getElementById('fltPrecio').addEventListener('change', applyFilters);
@@ -968,7 +968,7 @@
       document.getElementById('fltM2').value = '';
       applyFilters();
     });
- 
+
     // Modal form handlers
     document.getElementById('mFormBack').addEventListener('click', () => {
       document.getElementById('mFormSection').classList.remove('active');
@@ -1003,21 +1003,21 @@
       document.getElementById('mFormOk').style.display = 'block';
       btn.disabled = false; btn.textContent = 'Enviar consulta';
     });
- 
+
     // Modal close
     document.getElementById('mClose').addEventListener('click', closeModal);
     document.getElementById('modal').addEventListener('click', e => {
       if (e.target === document.getElementById('modal')) closeModal();
     });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
- 
+
     // Initial language
     applyLang('ES');
     loadProperties();
   });
- 
+
 </script>
- 
+
 <!-- Cal.com embed -->
 <script>
   (function (C, A, L) {
@@ -1048,9 +1048,9 @@
       p(cal, ar);
     };
   })(window, "https://app.cal.com/embed/embed.js", "init");
- 
+
   Cal("init", { origin: "https://cal.com" });
- 
+
   Cal("ui", {
     styles: { branding: { brandColor: "#002169" } },
     hideEventTypeDetails: false,
