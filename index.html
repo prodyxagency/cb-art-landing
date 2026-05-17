@@ -184,6 +184,16 @@
     .skel-img{height:155px}.skel-body{padding:12px}.skel-line{height:10px;border-radius:2px;margin-bottom:8px}
     .no-results{text-align:center;padding:40px 20px;color:rgba(255,255,255,.3);font-size:12px;grid-column:1/-1}
 
+
+    /* MODAL FORM */
+    .m-form-section{display:none;margin-top:14px;padding-top:14px;border-top:1px solid rgba(193,160,98,.15)}
+    .m-form-section.active{display:block}
+    .m-form-ttl{font-family:'Playfair Display',serif;font-size:13px;color:#C1A062;margin-bottom:10px}
+    .m-form-ok{text-align:center;padding:20px 0}
+    .m-form-ok-icon{font-size:26px;color:#C1A062;margin-bottom:6px}
+    .m-form-ok-t{font-family:'Playfair Display',serif;font-size:14px;color:#fff;margin-bottom:4px}
+    .m-form-ok-s{font-size:10px;color:rgba(255,255,255,.38);line-height:1.55}
+
     /* RESPONSIVE */
     @media(max-width:768px){
       .grid{grid-template-columns:1fr}
@@ -221,7 +231,7 @@
         <div class="lang-opt" data-lang="DE">🇩🇪 Deutsch</div>
       </div>
     </div>
-    <button class="nav-cta" id="navCta">Agendar una llamada con un experto</button>
+    <button class="nav-cta" id="navCta">Agendar llamada con un experto</button>
   </div>
 </nav>
 
@@ -239,7 +249,7 @@
     <p class="hero-sub" id="heroSub">Selección curada de las mejores residencias en Estepona, Guadalmina, Sotogrande y Marbella. Asesoramiento confidencial y personalizado.</p>
     <div class="hero-btns">
       <button class="btn-gold" id="heroCta">Ver propiedades</button>
-      <button class="btn-out" id="heroCtaOut">Agendar una llamada con un experto</button>
+      <button class="btn-out" id="heroCtaOut">Agendar llamada con un experto</button>
     </div>
   </div>
   <div class="scroll-arrow" id="scrollArrow">
@@ -354,6 +364,47 @@
       <div class="mctas">
         <button class="mcta-p" id="mAskBtn">Solicitar información</button>
         <button class="mcta-o" id="mViewBtn">Ver detalles →</button>
+      </div>
+
+      <!-- MODAL INLINE FORM -->
+      <div class="m-form-section" id="mFormSection">
+        <div class="m-form-ttl">Solicitar información</div>
+        <div style="padding:7px 10px;background:rgba(193,160,98,.07);border:1px solid rgba(193,160,98,.18);border-radius:2px;font-size:9px;color:rgba(255,255,255,.55);margin-bottom:11px;line-height:1.4">
+          <strong style="color:#C1A062;display:block;font-size:8px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px">Propiedad</strong>
+          <span id="mFormPropName"></span>
+        </div>
+        <div id="mFormFields">
+          <label class="fflbl">NOMBRE</label>
+          <input class="ffinp" id="mfName" type="text" placeholder="Ej. John Smith" style="margin-bottom:9px"/>
+          <label class="fflbl">TELÉFONO</label>
+          <div class="ff-row2" style="margin-bottom:9px">
+            <select class="ffinp" id="mfCode">
+              <option value="+34">🇪🇸 +34</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+33">🇫🇷 +33</option>
+              <option value="+49">🇩🇪 +49</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+31">🇳🇱 +31</option>
+            </select>
+            <input class="ffinp" id="mfPhone" type="tel" placeholder="600 000 000"/>
+          </div>
+          <label class="fflbl">EMAIL *</label>
+          <input class="ffinp" id="mfEmail" type="email" placeholder="your@email.com" style="margin-bottom:9px"/>
+          <div class="ff-legal" style="margin-bottom:10px">
+            <input type="checkbox" id="mfLegal"/>
+            <label class="ff-legal-t" for="mfLegal">He leído y acepto el <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art" target="_blank">aviso legal</a> y la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art" target="_blank">política de privacidad</a></label>
+          </div>
+          <div class="err-msg" id="mfErr" style="display:none;margin-bottom:7px">Completa los campos requeridos</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <button class="ff-back" id="mFormBack">← Volver</button>
+            <button class="ff-next" id="mFormSend">Enviar consulta</button>
+          </div>
+        </div>
+        <div class="m-form-ok" id="mFormOk" style="display:none">
+          <div class="m-form-ok-icon">✓</div>
+          <div class="m-form-ok-t">¡Perfecto!</div>
+          <div class="m-form-ok-s">Te contactaremos en menos de 2 horas.</div>
+        </div>
       </div>
     </div>
   </div>
@@ -498,7 +549,7 @@
 
   // ─── TRANSLATIONS ─────────────────────────────────────────────────────────
   const T = {
-    ES:{ heroTag:'Costa del Sol · Propiedades Exclusivas', h1:'Propiedades de <em>lujo excepcional</em><br>en la Costa del Sol', heroSub:'Selección curada de las mejores residencias en Estepona, Guadalmina, Sotogrande y Marbella. Asesoramiento confidencial y personalizado.', heroCta:'Ver propiedades', heroCtaOut:'Agendar una llamada con un experto', t1v:'+15 años', t1l:'de experiencia en lujo', t2v:'Clientes internacionales', t2l:'compradores de 30+ países', t3v:'Servicio confidencial', t3l:'asesoramiento personalizado', sectionTag:'Selección exclusiva', sectionTitle:'Propiedades Destacadas', sectionSub:'Una selección curada de residencias de lujo en Estepona, Guadalmina, Sotogrande y Marbella', viewAll:'Ver catálogo completo →', askInfo:'Solicitar información', catNote:'+200 propiedades exclusivas disponibles en la web oficial', catBtn:'Ver catálogo completo en la web oficial →', formTab:'Recibir más información sobre las propiedades', formProp:'Propiedad consultada', step1:'Paso 1 de 3 — Tus datos', step2:'Paso 2 de 3 — Tu búsqueda', step3:'Paso 3 de 3 — Confirmación', nameLbl:'NOMBRE', namePh:'Ej. John Smith', phoneLbl:'TELÉFONO', zoneLbl:'ZONA DE INTERÉS', zonePh:'— Seleccionar zona —', budgetLbl:'PRESUPUESTO APROXIMADO', budgetPh:'— Seleccionar —', timelineLbl:'TIEMPO ESTIMADO DE COMPRA *', timelinePh:'— Seleccionar —', emailLbl:'EMAIL *', emailPh:'your@email.com', legal:'He leído y acepto el <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20" target="_blank">aviso legal</a> y la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20" target="_blank">política de privacidad</a>', next:'Siguiente →', back:'← Atrás', send:'Enviar', errTime:'Este campo es obligatorio', errLegal:'Debes aceptar los términos para continuar', okTitle:'¡Perfecto!', okSub:'Te contactaremos en menos de 2 horas.<br>Revisá también tu email.', exitLbl:'¿Quieres explorar más opciones?', exitBtn:'Ver catálogo completo en la web oficial →', exitNote:'+200 propiedades exclusivas disponibles', beds:'habs.', baths:'baños', viewDetails:'Ver detalles →', tl:['Compra inmediata','1 a 3 meses','4 a 6 meses','7 a 12 meses'] },
+    ES:{ heroTag:'Costa del Sol · Propiedades Exclusivas', h1:'Propiedades de <em>lujo excepcional</em><br>en la Costa del Sol', heroSub:'Selección curada de las mejores residencias en Estepona, Guadalmina, Sotogrande y Marbella. Asesoramiento confidencial y personalizado.', heroCta:'Ver propiedades', heroCtaOut:'Agendar llamada con un experto', t1v:'+15 años', t1l:'de experiencia en lujo', t2v:'Clientes internacionales', t2l:'compradores de 30+ países', t3v:'Servicio confidencial', t3l:'asesoramiento personalizado', sectionTag:'Selección exclusiva', sectionTitle:'Propiedades Destacadas', sectionSub:'Una selección curada de residencias de lujo en Estepona, Guadalmina, Sotogrande y Marbella', viewAll:'Ver catálogo completo →', askInfo:'Solicitar información', catNote:'+200 propiedades exclusivas disponibles en la web oficial', catBtn:'Ver catálogo completo en la web oficial →', formTab:'Recibir más información sobre las propiedades', formProp:'Propiedad consultada', step1:'Paso 1 de 3 — Tus datos', step2:'Paso 2 de 3 — Tu búsqueda', step3:'Paso 3 de 3 — Confirmación', nameLbl:'NOMBRE', namePh:'Ej. John Smith', phoneLbl:'TELÉFONO', zoneLbl:'ZONA DE INTERÉS', zonePh:'— Seleccionar zona —', budgetLbl:'PRESUPUESTO APROXIMADO', budgetPh:'— Seleccionar —', timelineLbl:'TIEMPO ESTIMADO DE COMPRA *', timelinePh:'— Seleccionar —', emailLbl:'EMAIL *', emailPh:'your@email.com', legal:'He leído y acepto el <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20" target="_blank">aviso legal</a> y la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20" target="_blank">política de privacidad</a>', next:'Siguiente →', back:'← Atrás', send:'Enviar', errTime:'Este campo es obligatorio', errLegal:'Debes aceptar los términos para continuar', okTitle:'¡Perfecto!', okSub:'Te contactaremos en menos de 2 horas.<br>Revisá también tu email.', exitLbl:'¿Quieres explorar más opciones?', exitBtn:'Ver catálogo completo en la web oficial →', exitNote:'+200 propiedades exclusivas disponibles', beds:'habs.', baths:'baños', viewDetails:'Ver detalles →', tl:['Compra inmediata','1 a 3 meses','4 a 6 meses','7 a 12 meses'] },
     EN:{ heroTag:'Costa del Sol · Exclusive Properties', h1:'Exceptional <em>luxury properties</em><br>on the Costa del Sol', heroSub:'Curated selection of the finest residences in Marbella, Benahavís and Estepona. Confidential and personalised advisory.', heroCta:'View properties', heroCtaOut:'Schedule a call with an expert', t1v:'+15 years', t1l:'of luxury experience', t2v:'International clients', t2l:'buyers from 30+ countries', t3v:'Confidential service', t3l:'personalised advisory', sectionTag:'Exclusive selection', sectionTitle:'Featured Properties', sectionSub:'A curated selection of the finest luxury homes available on the Costa del Sol', viewAll:'View full catalogue →', askInfo:'Request information', catNote:'+200 exclusive properties available on the official website', catBtn:'View full catalogue on official website →', formTab:'Receive more information about properties', formProp:'Enquiring about', step1:'Step 1 of 3 — Your details', step2:'Step 2 of 3 — Your search', step3:'Step 3 of 3 — Confirmation', nameLbl:'FULL NAME', namePh:'e.g. John Smith', phoneLbl:'PHONE', zoneLbl:'AREA OF INTEREST', zonePh:'— Select area —', budgetLbl:'APPROXIMATE BUDGET', budgetPh:'— Select —', timelineLbl:'ESTIMATED PURCHASE TIMELINE *', timelinePh:'— Select —', emailLbl:'EMAIL *', emailPh:'your@email.com', legal:'I have read and accept the <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20" target="_blank">legal notice</a> and the <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20" target="_blank">privacy policy</a>', next:'Next →', back:'← Back', send:'Send', errTime:'This field is required', errLegal:'You must accept the terms to continue', okTitle:'Perfect!', okSub:'We will contact you within 2 hours.<br>Also check your email.', exitLbl:'Want to explore more options?', exitBtn:'View full catalogue on official website →', exitNote:'+200 exclusive properties available', beds:'beds', baths:'baths', viewDetails:'View details →', tl:['Immediate purchase','1 to 3 months','4 to 6 months','7 to 12 months'] },
     FR:{ heroTag:'Costa del Sol · Propriétés Exclusives', h1:'Propriétés de <em>luxe exceptionnel</em><br>sur la Costa del Sol', heroSub:'Sélection soignée des meilleures résidences à Marbella, Benahavís et Estepona. Conseil confidentiel et personnalisé.', heroCta:'Voir les propriétés', heroCtaOut:'Planifier un appel avec un expert', t1v:'+15 ans', t1l:"d'expérience dans le luxe", t2v:'Clients internationaux', t2l:'acheteurs de 30+ pays', t3v:'Service confidentiel', t3l:'conseil personnalisé', sectionTag:'Sélection exclusive', sectionTitle:'Propriétés en vedette', sectionSub:'Une sélection soignée des meilleures maisons de luxe disponibles sur la Costa del Sol', viewAll:'Voir le catalogue complet →', askInfo:'Demander des informations', catNote:'+200 propriétés exclusives sur le site officiel', catBtn:'Voir le catalogue complet →', formTab:'Recevoir plus d\'informations sur les propriétés', formProp:'Propriété consultée', step1:'Étape 1 sur 3 — Vos données', step2:'Étape 2 sur 3 — Votre recherche', step3:'Étape 3 sur 3 — Confirmation', nameLbl:'NOM COMPLET', namePh:'Ex. Jean Dupont', phoneLbl:'TÉLÉPHONE', zoneLbl:"ZONE D'INTÉRÊT", zonePh:'— Sélectionner —', budgetLbl:'BUDGET APPROXIMATIF', budgetPh:'— Sélectionner —', timelineLbl:"DÉLAI D'ACHAT ESTIMÉ *", timelinePh:'— Sélectionner —', emailLbl:'EMAIL *', emailPh:'votre@email.com', legal:"J'ai lu et j'accepte les <a href='https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20' target='_blank'>mentions légales</a> et la <a href='https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20' target='_blank'>politique de confidentialité</a>", next:'Suivant →', back:'← Retour', send:'Envoyer', errTime:'Ce champ est obligatoire', errLegal:'Vous devez accepter les conditions', okTitle:'Parfait !', okSub:'Nous vous contacterons dans moins de 2 heures.<br>Vérifiez aussi votre email.', exitLbl:'Vous souhaitez explorer plus ?', exitBtn:'Voir le catalogue complet →', exitNote:'+200 propriétés exclusives disponibles', beds:'ch.', baths:'sdb.', viewDetails:'Voir les détails →', tl:['Achat immédiat','1 à 3 mois','4 à 6 mois','7 à 12 mois'] },
     DE:{ heroTag:'Costa del Sol · Exklusive Immobilien', h1:'Außergewöhnliche <em>Luxusimmobilien</em><br>an der Costa del Sol', heroSub:'Kuratierte Auswahl der feinsten Residenzen in Marbella, Benahavís und Estepona. Vertrauliche und persönliche Beratung.', heroCta:'Immobilien ansehen', heroCtaOut:'Anruf mit einem Experten vereinbaren', t1v:'+15 Jahre', t1l:'Luxuserfahrung', t2v:'Internationale Kunden', t2l:'Käufer aus 30+ Ländern', t3v:'Vertraulicher Service', t3l:'persönliche Beratung', sectionTag:'Exklusive Auswahl', sectionTitle:'Ausgewählte Immobilien', sectionSub:'Eine kuratierte Auswahl der besten Luxushäuser an der Costa del Sol', viewAll:'Vollständigen Katalog ansehen →', askInfo:'Informationen anfragen', catNote:'+200 exklusive Immobilien auf der offiziellen Website', catBtn:'Vollständigen Katalog ansehen →', formTab:'Mehr Informationen zu Immobilien erhalten', formProp:'Angefragte Immobilie', step1:'Schritt 1 von 3 — Ihre Daten', step2:'Schritt 2 von 3 — Ihre Suche', step3:'Schritt 3 von 3 — Bestätigung', nameLbl:'VOLLSTÄNDIGER NAME', namePh:'z.B. Hans Müller', phoneLbl:'TELEFON', zoneLbl:'INTERESSENGEBIET', zonePh:'— Gebiet auswählen —', budgetLbl:'UNGEFÄHRES BUDGET', budgetPh:'— Auswählen —', timelineLbl:'GESCHÄTZTE KAUFZEIT *', timelinePh:'— Auswählen —', emailLbl:'E-MAIL *', emailPh:'ihre@email.com', legal:"Ich habe die <a href='https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20' target='_blank'>rechtlichen Hinweise</a> und die <a href='https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20' target='_blank'>Datenschutzrichtlinie</a> gelesen und akzeptiert.", next:'Weiter →', back:'← Zurück', send:'Senden', errTime:'Dieses Feld ist erforderlich', errLegal:'Sie müssen die Bedingungen akzeptieren', okTitle:'Perfekt!', okSub:'Wir melden uns in weniger als 2 Stunden.<br>Bitte prüfen Sie auch Ihre E-Mail.', exitLbl:'Möchten Sie mehr entdecken?', exitBtn:'Vollständigen Katalog ansehen →', exitNote:'+200 exklusive Immobilien verfügbar', beds:'Zi.', baths:'Bad.', viewDetails:'Details ansehen →', tl:['Sofortkauf','1 bis 3 Monate','4 bis 6 Monate','7 bis 12 Monate'] },
@@ -675,12 +726,23 @@
     }
 
     document.getElementById('mViewBtn').onclick = () => {
+      if (window.dataLayer) dataLayer.push({ event: 'click_ver_detalles', property_name: p.titulo, property_zone: p.zona, page_location: window.location.href });
       if (p.url) window.open(p.url, '_blank');
       else window.open('https://www.coldwellbanker.es?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=modal_ver&b=20', '_blank');
     };
     document.getElementById('mAskBtn').onclick = () => {
-      closeModal();
-      openForm(p.titulo);
+      if (window.dataLayer) dataLayer.push({ event: 'click_solicitar_info', property_name: p.titulo, property_zone: p.zona, page_location: window.location.href });
+      // Mostrar formulario dentro del modal
+      document.getElementById('mctas').style.display = 'none';
+      document.getElementById('mFormSection').classList.add('active');
+      document.getElementById('mFormPropName').textContent = p.titulo;
+      document.getElementById('mFormOk').style.display = 'none';
+      document.getElementById('mFormFields').style.display = 'block';
+      document.getElementById('mfName').value = '';
+      document.getElementById('mfPhone').value = '';
+      document.getElementById('mfEmail').value = '';
+      document.getElementById('mfLegal').checked = false;
+      document.getElementById('mfErr').style.display = 'none';
     };
 
     document.getElementById('modal').style.display = 'flex';
@@ -692,6 +754,9 @@
     document.getElementById('modal').style.display = 'none';
     document.body.style.overflow = '';
     currentModal = null;
+    // Reset modal form
+    document.getElementById('mFormSection').classList.remove('active');
+    document.getElementById('mctas').style.display = '';
   }
 
   function openForm(propName) {
@@ -764,7 +829,7 @@
       fuente: window.location.href
     };
 
-    if (window.dataLayer) dataLayer.push({ event: 'generate_lead', lead_email: payload.email, lead_zone: payload.zona });
+    if (window.dataLayer) { dataLayer.push({ event: 'generate_lead', lead_email: payload.email, lead_zone: payload.zona, page_location: window.location.href }); dataLayer.push({ event: 'form_submit', page_location: window.location.href }); }
 
     try {
       await fetch(WEBHOOK_URL, {
@@ -867,14 +932,14 @@
     const CAL_LINK = 'prodyx-agency-zpcsdn/15min';
     document.getElementById('navCta').addEventListener('click', () => {
       Cal('modal', { calLink: CAL_LINK, config: { layout: 'month_view' } });
-      if (window.dataLayer) dataLayer.push({ event: 'click_agendar_llamada', source: 'nav' });
+      if (window.dataLayer) dataLayer.push({ event: 'click_agendar_navbar', button_location: 'navbar', page_location: window.location.href });
     });
     document.getElementById('heroCta').addEventListener('click', () => {
       document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
     });
     document.getElementById('heroCtaOut').addEventListener('click', () => {
       Cal('modal', { calLink: CAL_LINK, config: { layout: 'month_view' } });
-      if (window.dataLayer) dataLayer.push({ event: 'click_agendar_llamada', source: 'hero' });
+      if (window.dataLayer) dataLayer.push({ event: 'click_agendar_banner', button_location: 'hero_banner', page_location: window.location.href });
     });
     document.getElementById('scrollArrow').addEventListener('click', () => {
       document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
@@ -883,12 +948,12 @@
     // Catalogue button
     document.getElementById('catBtn').addEventListener('click', () => {
       window.open('https://www.coldwellbanker.es/en/buy/search-results?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=catbtn&b=20', '_blank');
-      if (window.dataLayer) dataLayer.push({ event: 'click_catalogue' });
+      if (window.dataLayer) dataLayer.push({ event: 'click_catalogo_oficial', page_location: window.location.href });
     });
 
     // Form navigation
-    document.getElementById('next1Btn').addEventListener('click', () => { if (validateStep1()) goStep(2); });
-    document.getElementById('next2Btn').addEventListener('click', () => { if (validateStep2()) goStep(3); });
+    document.getElementById('next1Btn').addEventListener('click', () => { if (validateStep1()) { goStep(2); if (window.dataLayer) dataLayer.push({ event: 'form_step_1_complete', page_location: window.location.href }); } });
+    document.getElementById('next2Btn').addEventListener('click', () => { if (validateStep2()) { goStep(3); if (window.dataLayer) dataLayer.push({ event: 'form_step_2_complete', page_location: window.location.href }); } });
     document.getElementById('back2Btn').addEventListener('click', () => goStep(1));
     document.getElementById('back3Btn').addEventListener('click', () => goStep(2));
     document.getElementById('sendBtn').addEventListener('click', sendForm);
@@ -902,6 +967,41 @@
       document.getElementById('fltPrecio').value = '';
       document.getElementById('fltM2').value = '';
       applyFilters();
+    });
+
+    // Modal form handlers
+    document.getElementById('mFormBack').addEventListener('click', () => {
+      document.getElementById('mFormSection').classList.remove('active');
+      document.getElementById('mctas').style.display = '';
+    });
+    document.getElementById('mFormSend').addEventListener('click', async () => {
+      const name = document.getElementById('mfName').value.trim();
+      const phone = document.getElementById('mfPhone').value.trim();
+      const email = document.getElementById('mfEmail').value.trim();
+      const legal = document.getElementById('mfLegal').checked;
+      if (!(name || phone) || !email || !legal) {
+        document.getElementById('mfErr').style.display = 'block';
+        return;
+      }
+      const btn = document.getElementById('mFormSend');
+      btn.disabled = true; btn.textContent = '…';
+      const payload = {
+        nombre: name,
+        telefono: (document.getElementById('mfCode').value || '+34') + ' ' + phone,
+        email: email,
+        propiedad: document.getElementById('mFormPropName').textContent,
+        idioma: lang,
+        fecha: new Date().toISOString(),
+        fuente: window.location.href,
+        origen: 'modal_form'
+      };
+      if (window.dataLayer) dataLayer.push({ event: 'modal_form_submit', property_name: payload.propiedad, page_location: window.location.href });
+      try {
+        await fetch(WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+      } catch(e) { console.warn('Webhook error:', e.message); }
+      document.getElementById('mFormFields').style.display = 'none';
+      document.getElementById('mFormOk').style.display = 'block';
+      btn.disabled = false; btn.textContent = 'Enviar consulta';
     });
 
     // Modal close
