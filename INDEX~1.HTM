@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coldwell Banker Art — Propiedades de Lujo en la Costa del Sol</title>
+  <meta name="description" content="Selección curada de las mejores residencias en Estepona, Guadalmina, Sotogrande y Marbella. Asesoramiento confidencial y personalizado." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet" />
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NQT8LNF4');</script>
+  <!-- End Google Tag Manager -->
+
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{background:#020E1E;font-family:'Roboto',Arial,sans-serif;color:#fff;width:100%}
+
+    /* NAV */
+    .nav{background:#002169;border-bottom:1px solid rgba(193,160,98,0.18);padding:0 28px;height:58px;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:50}
+    .logo-wrap{display:flex;align-items:center;gap:10px}
+    .brand-name{font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#fff;line-height:1.3}
+    .brand-sub{font-size:8px;color:#C1A062;letter-spacing:.1em;text-transform:uppercase}
+    .nav-right{display:flex;align-items:center;gap:10px}
+    .lang-wrap{position:relative}
+    .lang-btn{display:flex;align-items:center;gap:5px;padding:7px 13px;background:transparent;border:1px solid rgba(255,255,255,0.22);border-radius:2px;color:rgba(255,255,255,0.8);font-size:11px;font-weight:600;letter-spacing:.08em;cursor:pointer;font-family:'Roboto',sans-serif}
+    .lang-btn svg{width:13px;height:13px;stroke:rgba(255,255,255,0.5);fill:none;stroke-width:2;transition:transform .2s}
+    .lang-btn.open svg{transform:rotate(180deg)}
+    .lang-dd{display:none;position:absolute;top:calc(100% + 5px);right:0;background:#002169;border:1px solid rgba(193,160,98,0.25);border-radius:2px;min-width:130px;overflow:hidden;z-index:300;box-shadow:0 8px 24px rgba(0,0,0,.4)}
+    .lang-dd.open{display:block}
+    .lang-opt{display:flex;align-items:center;gap:8px;padding:9px 14px;font-size:11px;font-weight:500;letter-spacing:.06em;color:rgba(255,255,255,0.55);cursor:pointer;transition:all .15s;border-bottom:1px solid rgba(255,255,255,.06)}
+    .lang-opt:last-child{border-bottom:none}
+    .lang-opt:hover,.lang-opt.act{background:rgba(193,160,98,0.12);color:#C1A062}
+    .nav-cta{padding:9px 20px;background:#C1A062;color:#002169;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;border:none;cursor:pointer;font-family:'Roboto',sans-serif}
+
+    /* HERO */
+    .hero{position:relative;height:340px;display:flex;align-items:center;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1400&q=80');background-size:cover;background-position:center 40%;filter:brightness(.28) saturate(0.9)}
+    .hero-ov{position:absolute;inset:0;background:linear-gradient(120deg,rgba(0,33,105,.92) 0%,rgba(0,33,105,.55) 45%,rgba(2,14,30,.65) 100%)}
+    .hero-accent{position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,transparent,#C1A062 15%,#C1A062 85%,transparent)}
+    .hero-c{position:relative;padding:0 36px;max-width:620px}
+    .hero-tag{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(193,160,98,.3);padding:4px 12px;border-radius:2px;margin-bottom:16px}
+    .hero-tag-bar{width:14px;height:1px;background:#C1A062}
+    .hero-tag-t{font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#C1A062;font-weight:600}
+    .hero-h1{font-family:'Playfair Display',serif;font-size:36px;font-weight:400;line-height:1.1;margin-bottom:12px}
+    .hero-h1 em{color:#C1A062;font-style:italic}
+    .hero-sub{font-size:12px;color:rgba(255,255,255,.62);line-height:1.7;margin-bottom:22px;font-weight:300;max-width:480px}
+    .hero-btns{display:flex;gap:10px;flex-wrap:wrap}
+    .btn-gold{padding:11px 24px;background:#C1A062;color:#002169;font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;border:none;cursor:pointer;font-family:'Roboto',sans-serif}
+    .btn-out{padding:11px 24px;background:transparent;color:#fff;font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;border:1px solid rgba(255,255,255,.32);cursor:pointer;font-family:'Roboto',sans-serif}
+    .scroll-arrow{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,.2);background:rgba(0,33,105,.5);display:flex;align-items:center;justify-content:center;cursor:pointer;animation:bob 2s ease-in-out infinite}
+    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(4px)}}
+    .scroll-arrow svg{width:14px;height:14px;stroke:#C1A062;fill:none;stroke-width:2.5}
+
+    /* TRUST */
+    .trust{background:#C1A062;display:grid;grid-template-columns:repeat(3,1fr)}
+    .trust-i{padding:16px 14px;text-align:center;border-right:1px solid rgba(0,33,105,.18)}
+    .trust-i:last-child{border-right:none}
+    .trust-v{font-size:13px;font-family:'Playfair Display',serif;font-weight:600;color:#002169;margin-bottom:2px}
+    .trust-l{font-size:8px;color:rgba(0,33,105,.62);letter-spacing:.07em;text-transform:uppercase;font-weight:600}
+
+    /* PROPERTIES */
+    .props{padding:48px 28px 44px;background:#020E1E}
+    .slbl{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+    .slbl-bar{height:1px;width:28px;background:#C1A062}
+    .slbl-t{font-size:8px;letter-spacing:.22em;text-transform:uppercase;color:#C1A062;font-weight:600}
+    .props-hdr{display:flex;justify-content:space-between;align-items:flex-end;margin-bottom:26px;gap:12px;flex-wrap:wrap}
+    .props-ttl{font-family:'Playfair Display',serif;font-size:26px;font-weight:400;line-height:1.2;margin-bottom:6px}
+    .props-sub{font-size:11px;color:rgba(255,255,255,.38);max-width:360px;line-height:1.65}
+    .cat-lnk{font-size:9px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:#C1A062;border:1px solid rgba(193,160,98,.32);padding:8px 14px;border-radius:2px;background:none;cursor:pointer;font-family:'Roboto',sans-serif;white-space:nowrap}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+    .card{background:#0A1929;border-radius:3px;overflow:hidden;border:1px solid rgba(255,255,255,.06);cursor:pointer;transition:all .3s}
+    .card:hover{border-color:rgba(193,160,98,.48);transform:translateY(-3px)}
+    .cimg{position:relative;height:155px;overflow:hidden}
+    .cimg img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+    .card:hover .cimg img{transform:scale(1.07)}
+    .cig{position:absolute;inset:0;background:linear-gradient(to top,rgba(2,14,30,.82) 0%,transparent 55%)}
+    .cbadge{position:absolute;top:9px;right:9px;background:#C1A062;color:#002169;padding:3px 7px;border-radius:2px;font-size:9px;font-weight:700;letter-spacing:.04em}
+    .cbody{padding:12px}
+    .czone{font-size:8px;color:#C1A062;letter-spacing:.14em;text-transform:uppercase;margin-bottom:3px;font-weight:600}
+    .cname{font-family:'Playfair Display',serif;font-size:13px;font-weight:400;line-height:1.3;margin-bottom:9px}
+    .cstats{display:flex;gap:12px;margin-bottom:9px}
+    .csv{font-size:12px;font-weight:600}
+    .csl{font-size:8px;color:rgba(255,255,255,.3);letter-spacing:.05em}
+    .cbtn{width:100%;padding:7px;background:transparent;color:#C1A062;border:1px solid rgba(193,160,98,.55);border-radius:2px;font-size:8px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;cursor:pointer;font-family:'Roboto',sans-serif;transition:all .25s}
+    .card:hover .cbtn{background:#C1A062;color:#002169}
+    .cat-bot{text-align:center;margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.05)}
+    .cat-bot-note{font-size:10px;color:rgba(255,255,255,.22);margin-bottom:10px}
+    .cat-bot-btn{padding:11px 26px;background:#C1A062;color:#002169;font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;border-radius:2px;border:none;cursor:pointer;font-family:'Roboto',sans-serif}
+
+    /* TERMS */
+    .terms{background:#0a1929;border-top:1px solid rgba(193,160,98,.08);padding:24px 28px}
+    .terms-ttl{font-size:9px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-bottom:8px}
+    .terms-txt{font-size:10px;color:rgba(255,255,255,.25);line-height:1.75;max-width:900px}
+    .terms-txt a{color:rgba(193,160,98,.65);text-decoration:underline}
+
+    /* EXIT + FOOTER */
+    .exit{padding:22px 28px;background:#020E1E;border-top:1px solid rgba(193,160,98,.06);text-align:center}
+    .exit-lbl{font-size:9px;color:rgba(255,255,255,.25);letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}
+    .exit-btn{padding:9px 20px;background:transparent;color:rgba(255,255,255,.4);border:1px solid rgba(255,255,255,.1);border-radius:2px;font-size:10px;font-weight:500;letter-spacing:.07em;cursor:pointer;font-family:'Roboto',sans-serif}
+    .exit-note{font-size:9px;color:rgba(255,255,255,.15);margin-top:7px}
+    .footer{padding:14px 28px;background:#010d1e;border-top:1px solid rgba(255,255,255,.05);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+    .footer-c{font-size:9px;color:rgba(255,255,255,.2)}
+    .footer-links{display:flex;gap:14px}
+    .footer-lnk{font-size:9px;color:rgba(255,255,255,.22);cursor:pointer;text-decoration:underline}
+
+    /* FLOATING FORM */
+    .ff{position:fixed;bottom:0;right:22px;z-index:100;width:310px}
+    .ff-tab{background:#002169;color:#fff;padding:10px 16px;border-radius:4px 4px 0 0;display:flex;align-items:center;justify-content:space-between;cursor:pointer;font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-family:'Roboto',sans-serif;border-top:2px solid #C1A062}
+    .ff-dot{width:7px;height:7px;border-radius:50%;background:#C1A062;animation:pulse 2s infinite;flex-shrink:0}
+    @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+    .ff-arr{font-size:10px;color:#C1A062;transition:transform .3s}
+    .ff-arr.open{transform:rotate(180deg)}
+    .ff-body{background:#0D1E38;border:1px solid rgba(193,160,98,.18);border-top:none;overflow:hidden;max-height:0;transition:max-height .4s ease}
+    .ff-body.open{max-height:520px}
+    .ff-inner{padding:15px}
+    .ff-ptag{padding:7px 10px;background:rgba(193,160,98,.07);border:1px solid rgba(193,160,98,.18);border-radius:2px;font-size:9px;color:rgba(255,255,255,.55);margin-bottom:11px;line-height:1.4;display:none}
+    .ff-ptag strong{color:#C1A062;display:block;font-size:8px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px}
+    .ff-steps{display:flex;gap:4px;margin-bottom:4px}
+    .ff-st{flex:1;height:2px;border-radius:1px;transition:background .3s;background:rgba(255,255,255,.08)}
+    .ff-st.done{background:#C1A062}
+    .ff-step-lbl{font-size:8px;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:11px;font-weight:600;margin-top:4px}
+    .fflbl{display:block;font-size:8px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:4px}
+    .ffinp{width:100%;padding:8px 10px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:2px;color:#fff;font-size:11px;outline:none;font-family:'Roboto',sans-serif;margin-bottom:9px;transition:border-color .2s}
+    .ffinp:focus{border-color:rgba(193,160,98,.5)}
+    .ffinp option{background:#0D1E38;color:#fff}
+    .ffinp.err{border-color:rgba(220,70,70,.6)!important}
+    .ff-row2{display:grid;grid-template-columns:96px 1fr;gap:6px;margin-bottom:9px}
+    .ff-row2 .ffinp{margin-bottom:0}
+    .ff-nav{display:grid;grid-template-columns:72px 1fr;gap:6px;margin-top:3px}
+    .ff-next{padding:9px;background:#C1A062;color:#002169;border:none;border-radius:2px;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'Roboto',sans-serif}
+    .ff-next:hover{background:#d4b070}
+    .ff-next:disabled{opacity:.6;cursor:not-allowed}
+    .ff-back{padding:9px;background:transparent;color:rgba(255,255,255,.35);border:1px solid rgba(255,255,255,.1);border-radius:2px;font-size:9px;font-weight:600;cursor:pointer;font-family:'Roboto',sans-serif}
+    .ff-legal{display:flex;align-items:flex-start;gap:6px;margin-bottom:8px;margin-top:1px}
+    .ff-legal input{margin-top:2px;width:13px;height:13px;flex-shrink:0;cursor:pointer;accent-color:#C1A062}
+    .ff-legal-t{font-size:9px;color:rgba(255,255,255,.28);line-height:1.55;cursor:pointer}
+    .ff-legal-t a{color:rgba(193,160,98,.65);text-decoration:underline}
+    .err-msg{font-size:9px;color:#e05555;margin-top:-6px;margin-bottom:7px;display:none}
+    .ff-ok{text-align:center;padding:18px 0}
+    .ff-ok-icon{font-size:28px;color:#C1A062;margin-bottom:8px}
+    .ff-ok-t{font-family:'Playfair Display',serif;font-size:15px;color:#fff;margin-bottom:5px}
+    .ff-ok-s{font-size:10px;color:rgba(255,255,255,.38);line-height:1.55}
+    .step-panel{display:none}
+    .step-panel.active{display:block}
+
+    /* MODAL */
+    .mbd{display:none;position:fixed;inset:0;z-index:200;background:rgba(1,13,30,.93);align-items:center;justify-content:center;padding:16px}
+    .mbd.open{display:flex}
+    .mbox{background:#0A1929;border-radius:4px;border:1px solid rgba(193,160,98,.18);width:100%;max-width:580px;max-height:90vh;overflow-y:auto}
+    .mimg{position:relative;height:190px;overflow:hidden}
+    .mimg img{width:100%;height:100%;object-fit:cover}
+    .mig{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,25,41,1) 0%,transparent 55%)}
+    .minfo{position:absolute;bottom:13px;left:18px}
+    .mzone{font-size:8px;color:#C1A062;letter-spacing:.15em;text-transform:uppercase;margin-bottom:3px;font-weight:600}
+    .mtitle{font-family:'Playfair Display',serif;font-size:19px;font-weight:400}
+    .mclose{position:absolute;top:10px;right:10px;background:rgba(1,13,30,.85);border:1px solid rgba(255,255,255,.2);color:#fff;border-radius:50%;width:28px;height:28px;font-size:15px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-family:'Roboto',sans-serif}
+    .mcont{padding:18px}
+    .mprow{display:flex;justify-content:space-between;align-items:center;margin-bottom:11px;flex-wrap:wrap;gap:8px}
+    .mprice{font-size:20px;font-weight:700;color:#C1A062;font-family:'Playfair Display',serif}
+    .mstats{display:flex;gap:16px}
+    .msv{font-size:14px;font-weight:700;text-align:center}
+    .msl{font-size:8px;color:rgba(255,255,255,.32);text-align:center}
+    .mdesc{font-size:11px;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:12px}
+    .mfeats{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:14px}
+    .mfeat{padding:3px 9px;border:1px solid rgba(193,160,98,.2);border-radius:2px;font-size:9px;color:rgba(255,255,255,.45)}
+    .mctas{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+    .mcta-p{padding:11px;background:#C1A062;color:#002169;border:none;border-radius:2px;font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:pointer;font-family:'Roboto',sans-serif}
+    .mcta-o{padding:11px;background:transparent;color:#C1A062;border:1px solid rgba(193,160,98,.45);border-radius:2px;font-size:9px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;font-family:'Roboto',sans-serif}
+
+    /* FILTER BAR */
+    .filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:22px;align-items:center}
+    .filter-sel{padding:7px 12px;background:rgba(255,255,255,.05);border:1px solid rgba(193,160,98,.28);border-radius:2px;color:rgba(255,255,255,.75);font-size:10px;font-weight:500;letter-spacing:.06em;font-family:'Roboto',sans-serif;cursor:pointer;outline:none;min-width:160px}
+    .filter-sel option{background:#0D1E38;color:#fff}
+    .filter-clear{padding:7px 14px;background:transparent;border:1px solid rgba(255,255,255,.12);border-radius:2px;color:rgba(255,255,255,.35);font-size:10px;font-weight:500;letter-spacing:.06em;font-family:'Roboto',sans-serif;cursor:pointer;display:none}
+    .filter-clear.show{display:block}
+    .filter-count{font-size:9px;color:rgba(255,255,255,.3);margin-left:auto;align-self:center;letter-spacing:.06em}
+
+    /* LOADING SKELETON */
+    .skeleton{background:linear-gradient(90deg,#0a1929 25%,#0d2040 50%,#0a1929 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:3px}
+    @keyframes shimmer{0%{background-position:200% 0}100%{background-position:-200% 0}}
+    .skel-card{background:#0A1929;border-radius:3px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+    .skel-img{height:155px}.skel-body{padding:12px}.skel-line{height:10px;border-radius:2px;margin-bottom:8px}
+    .no-results{text-align:center;padding:40px 20px;color:rgba(255,255,255,.3);font-size:12px;grid-column:1/-1}
+
+
+    /* MODAL FORM */
+    .m-form-section{display:none;margin-top:14px;padding-top:14px;border-top:1px solid rgba(193,160,98,.15)}
+    .m-form-section.active{display:block}
+    .m-form-ttl{font-family:'Playfair Display',serif;font-size:13px;color:#C1A062;margin-bottom:10px}
+    .m-form-ok{text-align:center;padding:20px 0}
+    .m-form-ok-icon{font-size:26px;color:#C1A062;margin-bottom:6px}
+    .m-form-ok-t{font-family:'Playfair Display',serif;font-size:14px;color:#fff;margin-bottom:4px}
+    .m-form-ok-s{font-size:10px;color:rgba(255,255,255,.38);line-height:1.55}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .grid{grid-template-columns:1fr}
+      .hero-h1{font-size:26px}
+      .ff{width:calc(100% - 16px);right:8px}
+      .nav{padding:0 16px}
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NQT8LNF4" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="logo-wrap">
+    <img src="data:image/png;base64,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" alt="Coldwell Banker Art Real Estate" width="40" height="40" style="flex-shrink:0;display:block" />
+    <div style="margin-left:10px">
+      <div class="brand-name">Coldwell Banker</div>
+      <div class="brand-sub">Art Real Estate</div>
+    </div>
+  </div>
+  <div class="nav-right">
+    <div class="lang-wrap">
+      <button class="lang-btn" id="langBtn">
+        <span id="langLabel">ES</span>
+        <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <div class="lang-dd" id="langDd">
+        <div class="lang-opt" data-lang="ES">🇪🇸 Español</div>
+        <div class="lang-opt" data-lang="EN">🇬🇧 English</div>
+        <div class="lang-opt" data-lang="FR">🇫🇷 Français</div>
+        <div class="lang-opt" data-lang="DE">🇩🇪 Deutsch</div>
+      </div>
+    </div>
+    <button class="nav-cta" id="navCta">Agendar llamada con un experto</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-accent"></div>
+  <div class="hero-c">
+    <div class="hero-tag">
+      <div class="hero-tag-bar"></div>
+      <span class="hero-tag-t" id="heroTag">Costa del Sol · Propiedades Exclusivas</span>
+    </div>
+    <h1 class="hero-h1" id="heroH1">Propiedades de <em>lujo excepcional</em><br>en la Costa del Sol</h1>
+    <p class="hero-sub" id="heroSub">Selección curada de las mejores residencias en Estepona, Guadalmina, Sotogrande y Marbella. Asesoramiento confidencial y personalizado.</p>
+    <div class="hero-btns">
+      <button class="btn-gold" id="heroCta">Ver propiedades</button>
+      <button class="btn-out" id="heroCtaOut">Agendar llamada con un experto</button>
+    </div>
+  </div>
+  <div class="scroll-arrow" id="scrollArrow">
+    <svg viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-i">
+    <div class="trust-v" id="t1v">+15 años</div>
+    <div class="trust-l" id="t1l">de experiencia en lujo</div>
+  </div>
+  <div class="trust-i">
+    <div class="trust-v" id="t2v">Clientes internacionales</div>
+    <div class="trust-l" id="t2l">compradores de 30+ países</div>
+  </div>
+  <div class="trust-i">
+    <div class="trust-v" id="t3v">Servicio confidencial</div>
+    <div class="trust-l" id="t3l">asesoramiento personalizado</div>
+  </div>
+</div>
+
+<!-- PROPERTIES -->
+<section class="props" id="properties">
+  <div class="slbl">
+    <div class="slbl-bar"></div>
+    <span class="slbl-t" id="sectionTag">Selección exclusiva</span>
+  </div>
+  <div class="props-hdr">
+    <div>
+      <div class="props-ttl" id="sectionTitle">Propiedades Destacadas</div>
+      <div class="props-sub" id="sectionSub">Una selección curada de residencias de lujo en Estepona, Guadalmina, Sotogrande y Marbella</div>
+    </div>
+  </div>
+
+  <!-- FILTERS -->
+  <div class="filters">
+    <select class="filter-sel" id="fltZona">
+      <option value="">— Todas las zonas —</option>
+    </select>
+    <select class="filter-sel" id="fltPrecio">
+      <option value="">— Cualquier precio —</option>
+      <option value="0-500000">Hasta 500.000 €</option>
+      <option value="500000-1000000">500.000 – 1.000.000 €</option>
+      <option value="1000000-2000000">1.000.000 – 2.000.000 €</option>
+      <option value="2000000-5000000">2.000.000 – 5.000.000 €</option>
+      <option value="5000000-99999999">Más de 5.000.000 €</option>
+    </select>
+    <select class="filter-sel" id="fltM2">
+      <option value="">— Cualquier tamaño —</option>
+      <option value="0-150">Hasta 150 m²</option>
+      <option value="150-300">150 – 300 m²</option>
+      <option value="300-500">300 – 500 m²</option>
+      <option value="500-99999">Más de 500 m²</option>
+    </select>
+    <button class="filter-clear" id="filterClear">✕ Limpiar</button>
+    <span class="filter-count" id="filterCount"></span>
+  </div>
+
+  <!-- GRID -->
+  <div class="grid" id="propertyGrid"></div>
+
+  <!-- CATALOGUE BOTTOM -->
+  <div class="cat-bot">
+    <div class="cat-bot-note" id="catNote">+200 propiedades exclusivas disponibles en la web oficial</div>
+    <button class="cat-bot-btn" id="catBtn">Ver catálogo completo en la web oficial →</button>
+  </div>
+</section>
+
+<!-- TERMS -->
+<section class="terms">
+  <div class="terms-ttl">Aviso legal</div>
+  <p class="terms-txt">
+    Esta página es material publicitario elaborado por Prodyx Agency para Coldwell Banker Art Real Estate. Las propiedades mostradas son una selección representativa y pueden no estar disponibles en el momento de su consulta. Los precios son orientativos y pueden variar. La información completa y actualizada está disponible en <a href="https://www.coldwellbanker.es?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_terms&b=20" target="_blank">coldwellbanker.es</a>. Coldwell Banker Art Real Estate está sujeta a la normativa española e internacional de protección de datos. Al enviar el formulario acepta el tratamiento de sus datos conforme a la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_privacy&b=20" target="_blank">política de privacidad</a>.
+  </p>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <span class="footer-c">© 2025 Coldwell Banker Art Real Estate · Costa del Sol</span>
+  <div class="footer-links">
+    <a class="footer-lnk" href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_legal&b=20" target="_blank">Aviso legal</a>
+    <a class="footer-lnk" href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_privacy&b=20" target="_blank">Privacidad</a>
+    <a class="footer-lnk" href="https://www.coldwellbanker.es/politica-de-cookies?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=footer_cookies&b=20" target="_blank">Cookies</a>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="mbd" id="modal">
+  <div class="mbox">
+    <div class="mimg">
+      <img id="mImg" src="" alt="" />
+      <div class="mig"></div>
+      <button class="mclose" id="mClose">✕</button>
+      <div class="minfo">
+        <div class="mzone" id="mZone"></div>
+        <div class="mtitle" id="mTitle"></div>
+      </div>
+    </div>
+    <div class="mcont">
+      <div class="mprow">
+        <div class="mprice" id="mPrice"></div>
+        <div class="mstats">
+          <div><div class="msv" id="mBeds"></div><div class="msl" id="mBedsL">habs.</div></div>
+          <div><div class="msv" id="mBaths"></div><div class="msl" id="mBathsL">baños</div></div>
+          <div><div class="msv" id="mM2"></div><div class="msl">m²</div></div>
+        </div>
+      </div>
+      <p class="mdesc" id="mDesc"></p>
+      <div class="mfeats" id="mFeats"></div>
+      <div class="mctas">
+        <button class="mcta-p" id="mAskBtn">Solicitar información</button>
+        <button class="mcta-o" id="mViewBtn">Ver detalles →</button>
+      </div>
+
+      <!-- MODAL INLINE FORM -->
+      <div class="m-form-section" id="mFormSection">
+        <div class="m-form-ttl">Solicitar información</div>
+        <div style="padding:7px 10px;background:rgba(193,160,98,.07);border:1px solid rgba(193,160,98,.18);border-radius:2px;font-size:9px;color:rgba(255,255,255,.55);margin-bottom:11px;line-height:1.4">
+          <strong style="color:#C1A062;display:block;font-size:8px;letter-spacing:.1em;text-transform:uppercase;margin-bottom:2px">Propiedad</strong>
+          <span id="mFormPropName"></span>
+        </div>
+        <div id="mFormFields">
+          <label class="fflbl">NOMBRE</label>
+          <input class="ffinp" id="mfName" type="text" placeholder="Ej. John Smith" style="margin-bottom:9px"/>
+          <label class="fflbl">TELÉFONO</label>
+          <div class="ff-row2" style="margin-bottom:9px">
+            <select class="ffinp" id="mfCode">
+              <option value="+34">🇪🇸 +34</option>
+              <option value="+44">🇬🇧 +44</option>
+              <option value="+33">🇫🇷 +33</option>
+              <option value="+49">🇩🇪 +49</option>
+              <option value="+1">🇺🇸 +1</option>
+              <option value="+31">🇳🇱 +31</option>
+            </select>
+            <input class="ffinp" id="mfPhone" type="tel" placeholder="600 000 000"/>
+          </div>
+          <label class="fflbl">EMAIL *</label>
+          <input class="ffinp" id="mfEmail" type="email" placeholder="your@email.com" style="margin-bottom:9px"/>
+          <div class="ff-legal" style="margin-bottom:10px">
+            <input type="checkbox" id="mfLegal"/>
+            <label class="ff-legal-t" for="mfLegal">He leído y acepto el <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art" target="_blank">aviso legal</a> y la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art" target="_blank">política de privacidad</a></label>
+          </div>
+          <div class="err-msg" id="mfErr" style="display:none;margin-bottom:7px">Completa los campos requeridos</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+            <button class="ff-back" id="mFormBack">← Volver</button>
+            <button class="ff-next" id="mFormSend">Enviar consulta</button>
+          </div>
+        </div>
+        <div class="m-form-ok" id="mFormOk" style="display:none">
+          <div class="m-form-ok-icon">✓</div>
+          <div class="m-form-ok-t">¡Perfecto!</div>
+          <div class="m-form-ok-s">Te contactaremos en menos de 2 horas.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FLOATING FORM -->
+<div class="ff" id="ff">
+  <div class="ff-tab" id="ffTab">
+    <div style="display:flex;align-items:center;gap:8px">
+      <div class="ff-dot"></div>
+      <span id="ffTabLabel">Recibir más información sobre las propiedades</span>
+    </div>
+    <span class="ff-arr open" id="ffArr">▲</span>
+  </div>
+  <div class="ff-body open" id="ffBody">
+    <div class="ff-inner">
+      <div class="ff-ptag" id="ffPtag">
+        <strong id="ffPtagLabel">Propiedad consultada</strong>
+        <span id="ffPtagVal"></span>
+      </div>
+      <div class="ff-steps">
+        <div class="ff-st" id="st1"></div>
+        <div class="ff-st" id="st2"></div>
+        <div class="ff-st" id="st3"></div>
+      </div>
+
+      <!-- STEP 1 -->
+      <div class="step-panel active" id="panel1">
+        <div class="ff-step-lbl" id="step1Lbl">Paso 1 de 3 — Tus datos</div>
+        <label class="fflbl" id="nameLbl">NOMBRE</label>
+        <input class="ffinp" id="fname" type="text" placeholder="Ej. John Smith" />
+        <div class="err-msg" id="errName">Este campo es obligatorio</div>
+        <label class="fflbl" id="phoneLbl">TELÉFONO</label>
+        <div class="ff-row2">
+          <select class="ffinp" id="fcode">
+            <option value="+34">🇪🇸 +34</option>
+            <option value="+44">🇬🇧 +44</option>
+            <option value="+33">🇫🇷 +33</option>
+            <option value="+49">🇩🇪 +49</option>
+            <option value="+1">🇺🇸 +1</option>
+            <option value="+31">🇳🇱 +31</option>
+            <option value="+32">🇧🇪 +32</option>
+            <option value="+41">🇨🇭 +41</option>
+            <option value="+46">🇸🇪 +46</option>
+            <option value="+47">🇳🇴 +47</option>
+          </select>
+          <input class="ffinp" id="fphone" type="tel" placeholder="600 000 000" />
+        </div>
+        <div class="ff-nav">
+          <div></div>
+          <button class="ff-next" id="next1Btn">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="step-panel" id="panel2">
+        <div class="ff-step-lbl" id="step2Lbl">Paso 2 de 3 — Tu búsqueda</div>
+        <label class="fflbl" id="zoneLbl">ZONA DE INTERÉS</label>
+        <select class="ffinp" id="fzone">
+          <option value="">— Seleccionar zona —</option>
+          <option value="Estepona">Estepona</option>
+          <option value="Guadalmina">Guadalmina</option>
+          <option value="Sotogrande">Sotogrande</option>
+          <option value="Marbella">Marbella</option>
+          <option value="Benahavís">Benahavís</option>
+          <option value="Puerto Banús">Puerto Banús</option>
+          <option value="Indiferente">Indiferente</option>
+        </select>
+        <label class="fflbl" id="budgetLbl">PRESUPUESTO APROXIMADO</label>
+        <select class="ffinp" id="fbudget">
+          <option value="">— Seleccionar —</option>
+          <option value="Hasta 500.000€">Hasta 500.000 €</option>
+          <option value="500.000€ – 1.000.000€">500.000 – 1.000.000 €</option>
+          <option value="1.000.000€ – 2.000.000€">1.000.000 – 2.000.000 €</option>
+          <option value="2.000.000€ – 5.000.000€">2.000.000 – 5.000.000 €</option>
+          <option value="Más de 5.000.000€">Más de 5.000.000 €</option>
+        </select>
+        <label class="fflbl" id="timelineLbl">TIEMPO ESTIMADO DE COMPRA *</label>
+        <select class="ffinp" id="ftimeline">
+          <option value="">— Seleccionar —</option>
+          <option value="Compra inmediata">Compra inmediata</option>
+          <option value="1 a 3 meses">1 a 3 meses</option>
+          <option value="4 a 6 meses">4 a 6 meses</option>
+          <option value="7 a 12 meses">7 a 12 meses</option>
+        </select>
+        <div class="err-msg" id="errTime">Este campo es obligatorio</div>
+        <div class="ff-nav">
+          <button class="ff-back" id="back2Btn">← Atrás</button>
+          <button class="ff-next" id="next2Btn">Siguiente →</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="step-panel" id="panel3">
+        <div class="ff-step-lbl" id="step3Lbl">Paso 3 de 3 — Confirmación</div>
+        <label class="fflbl" id="emailLbl">EMAIL *</label>
+        <input class="ffinp" id="femail" type="email" placeholder="your@email.com" />
+        <div class="ff-legal">
+          <input type="checkbox" id="flegals" />
+          <label class="ff-legal-t" for="flegals" id="legalTxt">He leído y acepto el <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20" target="_blank">aviso legal</a> y la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20" target="_blank">política de privacidad</a></label>
+        </div>
+        <div class="err-msg" id="errLegal">Debes aceptar los términos para continuar</div>
+        <div class="ff-nav">
+          <button class="ff-back" id="back3Btn">← Atrás</button>
+          <button class="ff-next" id="sendBtn">Enviar</button>
+        </div>
+      </div>
+
+      <!-- SUCCESS -->
+      <div class="step-panel" id="panelOk">
+        <div class="ff-ok">
+          <div class="ff-ok-icon">✓</div>
+          <div class="ff-ok-t" id="okTitle">¡Perfecto!</div>
+          <div class="ff-ok-s" id="okSub">Te contactaremos en menos de 2 horas.<br>Revisá también tu email.</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-16749711169');
+
+  // ─── GOOGLE SHEETS CONFIG ─────────────────────────────────────────────────
+  const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS-2RQPtIkaRWD_eJ5t5gxTFrgRK2VA3ThPUojBSz8hZkjUrxH0xO9mypXDlGq3OoGYlatqbZNrvHMW/pub?gid=0&single=true&output=csv';
+
+  // ─── WEBHOOK ──────────────────────────────────────────────────────────────
+  const WEBHOOK_URL = 'https://TU_INSTANCIA_N8N/webhook/cb-art-contacto';
+
+  // ─── STATE ────────────────────────────────────────────────────────────────
+  let ALL_PROPERTIES = [];
+  let FILTERED = [];
+  let lang = 'ES';
+  let step = 1;
+  let ffOpen = true;
+  let currentModal = null;
+  let propertyInterest = '';
+
+  // ─── TRANSLATIONS ─────────────────────────────────────────────────────────
+  const T = {
+    ES:{ heroTag:'Costa del Sol · Propiedades Exclusivas', h1:'Propiedades de <em>lujo excepcional</em><br>en la Costa del Sol', heroSub:'Selección curada de las mejores residencias en Estepona, Guadalmina, Sotogrande y Marbella. Asesoramiento confidencial y personalizado.', heroCta:'Ver propiedades', heroCtaOut:'Agendar llamada con un experto', t1v:'+15 años', t1l:'de experiencia en lujo', t2v:'Clientes internacionales', t2l:'compradores de 30+ países', t3v:'Servicio confidencial', t3l:'asesoramiento personalizado', sectionTag:'Selección exclusiva', sectionTitle:'Propiedades Destacadas', sectionSub:'Una selección curada de residencias de lujo en Estepona, Guadalmina, Sotogrande y Marbella', viewAll:'Ver catálogo completo →', askInfo:'Solicitar información', catNote:'+200 propiedades exclusivas disponibles en la web oficial', catBtn:'Ver catálogo completo en la web oficial →', formTab:'Recibir más información sobre las propiedades', formProp:'Propiedad consultada', step1:'Paso 1 de 3 — Tus datos', step2:'Paso 2 de 3 — Tu búsqueda', step3:'Paso 3 de 3 — Confirmación', nameLbl:'NOMBRE', namePh:'Ej. John Smith', phoneLbl:'TELÉFONO', zoneLbl:'ZONA DE INTERÉS', zonePh:'— Seleccionar zona —', budgetLbl:'PRESUPUESTO APROXIMADO', budgetPh:'— Seleccionar —', timelineLbl:'TIEMPO ESTIMADO DE COMPRA *', timelinePh:'— Seleccionar —', emailLbl:'EMAIL *', emailPh:'your@email.com', legal:'He leído y acepto el <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20" target="_blank">aviso legal</a> y la <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20" target="_blank">política de privacidad</a>', next:'Siguiente →', back:'← Atrás', send:'Enviar', errTime:'Este campo es obligatorio', errLegal:'Debes aceptar los términos para continuar', okTitle:'¡Perfecto!', okSub:'Te contactaremos en menos de 2 horas.<br>Revisá también tu email.', exitLbl:'¿Quieres explorar más opciones?', exitBtn:'Ver catálogo completo en la web oficial →', exitNote:'+200 propiedades exclusivas disponibles', beds:'habs.', baths:'baños', viewDetails:'Ver detalles →', tl:['Compra inmediata','1 a 3 meses','4 a 6 meses','7 a 12 meses'] },
+    EN:{ heroTag:'Costa del Sol · Exclusive Properties', h1:'Exceptional <em>luxury properties</em><br>on the Costa del Sol', heroSub:'Curated selection of the finest residences in Marbella, Benahavís and Estepona. Confidential and personalised advisory.', heroCta:'View properties', heroCtaOut:'Schedule a call with an expert', t1v:'+15 years', t1l:'of luxury experience', t2v:'International clients', t2l:'buyers from 30+ countries', t3v:'Confidential service', t3l:'personalised advisory', sectionTag:'Exclusive selection', sectionTitle:'Featured Properties', sectionSub:'A curated selection of the finest luxury homes available on the Costa del Sol', viewAll:'View full catalogue →', askInfo:'Request information', catNote:'+200 exclusive properties available on the official website', catBtn:'View full catalogue on official website →', formTab:'Receive more information about properties', formProp:'Enquiring about', step1:'Step 1 of 3 — Your details', step2:'Step 2 of 3 — Your search', step3:'Step 3 of 3 — Confirmation', nameLbl:'FULL NAME', namePh:'e.g. John Smith', phoneLbl:'PHONE', zoneLbl:'AREA OF INTEREST', zonePh:'— Select area —', budgetLbl:'APPROXIMATE BUDGET', budgetPh:'— Select —', timelineLbl:'ESTIMATED PURCHASE TIMELINE *', timelinePh:'— Select —', emailLbl:'EMAIL *', emailPh:'your@email.com', legal:'I have read and accept the <a href="https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20" target="_blank">legal notice</a> and the <a href="https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20" target="_blank">privacy policy</a>', next:'Next →', back:'← Back', send:'Send', errTime:'This field is required', errLegal:'You must accept the terms to continue', okTitle:'Perfect!', okSub:'We will contact you within 2 hours.<br>Also check your email.', exitLbl:'Want to explore more options?', exitBtn:'View full catalogue on official website →', exitNote:'+200 exclusive properties available', beds:'beds', baths:'baths', viewDetails:'View details →', tl:['Immediate purchase','1 to 3 months','4 to 6 months','7 to 12 months'] },
+    FR:{ heroTag:'Costa del Sol · Propriétés Exclusives', h1:'Propriétés de <em>luxe exceptionnel</em><br>sur la Costa del Sol', heroSub:'Sélection soignée des meilleures résidences à Marbella, Benahavís et Estepona. Conseil confidentiel et personnalisé.', heroCta:'Voir les propriétés', heroCtaOut:'Planifier un appel avec un expert', t1v:'+15 ans', t1l:"d'expérience dans le luxe", t2v:'Clients internationaux', t2l:'acheteurs de 30+ pays', t3v:'Service confidentiel', t3l:'conseil personnalisé', sectionTag:'Sélection exclusive', sectionTitle:'Propriétés en vedette', sectionSub:'Une sélection soignée des meilleures maisons de luxe disponibles sur la Costa del Sol', viewAll:'Voir le catalogue complet →', askInfo:'Demander des informations', catNote:'+200 propriétés exclusives sur le site officiel', catBtn:'Voir le catalogue complet →', formTab:'Recevoir plus d\'informations sur les propriétés', formProp:'Propriété consultée', step1:'Étape 1 sur 3 — Vos données', step2:'Étape 2 sur 3 — Votre recherche', step3:'Étape 3 sur 3 — Confirmation', nameLbl:'NOM COMPLET', namePh:'Ex. Jean Dupont', phoneLbl:'TÉLÉPHONE', zoneLbl:"ZONE D'INTÉRÊT", zonePh:'— Sélectionner —', budgetLbl:'BUDGET APPROXIMATIF', budgetPh:'— Sélectionner —', timelineLbl:"DÉLAI D'ACHAT ESTIMÉ *", timelinePh:'— Sélectionner —', emailLbl:'EMAIL *', emailPh:'votre@email.com', legal:"J'ai lu et j'accepte les <a href='https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20' target='_blank'>mentions légales</a> et la <a href='https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20' target='_blank'>politique de confidentialité</a>", next:'Suivant →', back:'← Retour', send:'Envoyer', errTime:'Ce champ est obligatoire', errLegal:'Vous devez accepter les conditions', okTitle:'Parfait !', okSub:'Nous vous contacterons dans moins de 2 heures.<br>Vérifiez aussi votre email.', exitLbl:'Vous souhaitez explorer plus ?', exitBtn:'Voir le catalogue complet →', exitNote:'+200 propriétés exclusives disponibles', beds:'ch.', baths:'sdb.', viewDetails:'Voir les détails →', tl:['Achat immédiat','1 à 3 mois','4 à 6 mois','7 à 12 mois'] },
+    DE:{ heroTag:'Costa del Sol · Exklusive Immobilien', h1:'Außergewöhnliche <em>Luxusimmobilien</em><br>an der Costa del Sol', heroSub:'Kuratierte Auswahl der feinsten Residenzen in Marbella, Benahavís und Estepona. Vertrauliche und persönliche Beratung.', heroCta:'Immobilien ansehen', heroCtaOut:'Anruf mit einem Experten vereinbaren', t1v:'+15 Jahre', t1l:'Luxuserfahrung', t2v:'Internationale Kunden', t2l:'Käufer aus 30+ Ländern', t3v:'Vertraulicher Service', t3l:'persönliche Beratung', sectionTag:'Exklusive Auswahl', sectionTitle:'Ausgewählte Immobilien', sectionSub:'Eine kuratierte Auswahl der besten Luxushäuser an der Costa del Sol', viewAll:'Vollständigen Katalog ansehen →', askInfo:'Informationen anfragen', catNote:'+200 exklusive Immobilien auf der offiziellen Website', catBtn:'Vollständigen Katalog ansehen →', formTab:'Mehr Informationen zu Immobilien erhalten', formProp:'Angefragte Immobilie', step1:'Schritt 1 von 3 — Ihre Daten', step2:'Schritt 2 von 3 — Ihre Suche', step3:'Schritt 3 von 3 — Bestätigung', nameLbl:'VOLLSTÄNDIGER NAME', namePh:'z.B. Hans Müller', phoneLbl:'TELEFON', zoneLbl:'INTERESSENGEBIET', zonePh:'— Gebiet auswählen —', budgetLbl:'UNGEFÄHRES BUDGET', budgetPh:'— Auswählen —', timelineLbl:'GESCHÄTZTE KAUFZEIT *', timelinePh:'— Auswählen —', emailLbl:'E-MAIL *', emailPh:'ihre@email.com', legal:"Ich habe die <a href='https://www.coldwellbanker.es/aviso-legal?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_legal&b=20' target='_blank'>rechtlichen Hinweise</a> und die <a href='https://www.coldwellbanker.es/politica-de-privacidad?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=form_privacy&b=20' target='_blank'>Datenschutzrichtlinie</a> gelesen und akzeptiert.", next:'Weiter →', back:'← Zurück', send:'Senden', errTime:'Dieses Feld ist erforderlich', errLegal:'Sie müssen die Bedingungen akzeptieren', okTitle:'Perfekt!', okSub:'Wir melden uns in weniger als 2 Stunden.<br>Bitte prüfen Sie auch Ihre E-Mail.', exitLbl:'Möchten Sie mehr entdecken?', exitBtn:'Vollständigen Katalog ansehen →', exitNote:'+200 exklusive Immobilien verfügbar', beds:'Zi.', baths:'Bad.', viewDetails:'Details ansehen →', tl:['Sofortkauf','1 bis 3 Monate','4 bis 6 Monate','7 bis 12 Monate'] },
+  };
+
+  // ─── CSV PARSER ───────────────────────────────────────────────────────────
+  function parseCSV(text) {
+    const rows = [];
+    const lines = text.split(/\r?\n/);
+    const headers = splitCSVLine(lines[0]);
+    for (let i = 1; i < lines.length; i++) {
+      if (!lines[i].trim()) continue;
+      const vals = splitCSVLine(lines[i]);
+      const obj = {};
+      headers.forEach((h, idx) => { obj[h.trim()] = (vals[idx] || '').trim(); });
+      rows.push(obj);
+    }
+    return rows;
+  }
+
+  function splitCSVLine(line) {
+    const result = [];
+    let cur = '', inQ = false;
+    for (let i = 0; i < line.length; i++) {
+      const c = line[i];
+      if (c === '"') { inQ = !inQ; continue; }
+      if (c === ',' && !inQ) { result.push(cur); cur = ''; continue; }
+      cur += c;
+    }
+    result.push(cur);
+    return result;
+  }
+
+  // ─── LOAD PROPERTIES FROM SHEET ──────────────────────────────────────────
+  async function loadProperties() {
+    showSkeleton();
+    try {
+      const res = await fetch(SHEET_CSV_URL);
+      const text = await res.text();
+      const rows = parseCSV(text);
+      ALL_PROPERTIES = rows
+        .filter(r => r.estado && r.estado.toLowerCase() === 'activa')
+        .sort((a, b) => {
+          if (a.destacada === 'si' && b.destacada !== 'si') return -1;
+          if (b.destacada === 'si' && a.destacada !== 'si') return 1;
+          return 0;
+        });
+      populateZoneFilter();
+      applyFilters();
+    } catch(e) {
+      document.getElementById('propertyGrid').innerHTML = '<div class="no-results">Error cargando propiedades. Recargá la página.</div>';
+    }
+  }
+
+  function showSkeleton() {
+    document.getElementById('propertyGrid').innerHTML = [1,2,3].map(() => `
+      <div class="skel-card">
+        <div class="skel-img skeleton"></div>
+        <div class="skel-body">
+          <div class="skel-line skeleton" style="width:50%;margin-bottom:6px"></div>
+          <div class="skel-line skeleton" style="width:80%;height:14px;margin-bottom:10px"></div>
+          <div class="skel-line skeleton" style="width:65%"></div>
+        </div>
+      </div>`).join('');
+  }
+
+  function populateZoneFilter() {
+    const zones = [...new Set(ALL_PROPERTIES.map(p => p.zona).filter(Boolean))].sort();
+    const sel = document.getElementById('fltZona');
+    // keep only first option
+    while(sel.options.length > 1) sel.remove(1);
+    zones.forEach(z => {
+      const o = document.createElement('option');
+      o.value = z; o.textContent = z;
+      sel.appendChild(o);
+    });
+  }
+
+  function applyFilters() {
+    const zona = document.getElementById('fltZona').value;
+    const precio = document.getElementById('fltPrecio').value;
+    const m2 = document.getElementById('fltM2').value;
+
+    const hasFilter = zona || precio || m2;
+    document.getElementById('filterClear').classList.toggle('show', !!hasFilter);
+
+    FILTERED = ALL_PROPERTIES.filter(p => {
+      if (zona && p.zona !== zona) return false;
+      if (precio) {
+        const [min, max] = precio.split('-').map(Number);
+        const pn = parseFloat(p.precio_num) || 0;
+        if (pn < min || pn > max) return false;
+      }
+      if (m2) {
+        const [min, max] = m2.split('-').map(Number);
+        const mn = parseFloat(p.m2) || 0;
+        if (mn < min || mn > max) return false;
+      }
+      return true;
+    });
+
+    const count = FILTERED.length;
+    document.getElementById('filterCount').textContent = count > 0 ? count + ' propiedad' + (count !== 1 ? 'es' : '') : '';
+    renderCards();
+  }
+
+  // ─── RENDER CARDS ─────────────────────────────────────────────────────────
+  function renderCards() {
+    const t = T[lang];
+    const grid = document.getElementById('propertyGrid');
+    if (FILTERED.length === 0 && ALL_PROPERTIES.length > 0) {
+      grid.innerHTML = '<div class="no-results">No hay propiedades con esos filtros.<br><span style="font-size:10px">Probá cambiando los criterios de búsqueda.</span></div>';
+      return;
+    }
+    grid.innerHTML = FILTERED.map((p, i) => `
+      <div class="card" data-idx="${i}">
+        <div class="cimg">
+          <img src="${p.imagen_url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'}" alt="${p.titulo}" loading="${i < 3 ? 'eager' : 'lazy'}" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'" />
+          <div class="cig"></div>
+          <div class="cbadge">${p.precio}</div>
+          ${p.destacada === 'si' ? '<div style="position:absolute;top:9px;left:9px;background:#002169;color:#C1A062;padding:3px 7px;border-radius:2px;font-size:8px;font-weight:700;letter-spacing:.06em">★ DESTACADA</div>' : ''}
+        </div>
+        <div class="cbody">
+          <div class="czone">${p.zona}</div>
+          <div class="cname">${p.titulo}</div>
+          <div class="cstats">
+            <div><div class="csv">${p.habitaciones}</div><div class="csl">${t.beds}</div></div>
+            <div><div class="csv">${p.banos}</div><div class="csl">${t.baths}</div></div>
+            <div><div class="csv">${p.m2}</div><div class="csl">m²</div></div>
+          </div>
+          <button class="cbtn">${t.askInfo}</button>
+        </div>
+      </div>`).join('');
+
+    // card click → modal
+    grid.querySelectorAll('.card').forEach(card => {
+      card.addEventListener('click', () => {
+        const idx = parseInt(card.dataset.idx);
+        showModal(FILTERED[idx]);
+      });
+    });
+  }
+
+  // ─── MODAL ────────────────────────────────────────────────────────────────
+  function showModal(p) {
+    const t = T[lang];
+    currentModal = p;
+    propertyInterest = p.titulo;
+    document.getElementById('mImg').src = p.imagen_url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800';
+    document.getElementById('mImg').onerror = function(){ this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'; };
+    document.getElementById('mZone').textContent = p.zona;
+    document.getElementById('mTitle').textContent = p.titulo;
+    document.getElementById('mPrice').textContent = p.precio;
+    document.getElementById('mBeds').textContent = p.habitaciones;
+    document.getElementById('mBaths').textContent = p.banos;
+    document.getElementById('mM2').textContent = p.m2;
+    document.getElementById('mBedsL').textContent = t.beds;
+    document.getElementById('mBathsL').textContent = t.baths;
+    document.getElementById('mDesc').textContent = p.descripcion || '';
+    document.getElementById('mAskBtn').textContent = t.askInfo;
+    document.getElementById('mViewBtn').textContent = t.viewDetails;
+
+    const feats = document.getElementById('mFeats');
+    feats.innerHTML = '';
+    if (p.caracteristicas) {
+      p.caracteristicas.split('|').forEach(f => {
+        if (f.trim()) {
+          const d = document.createElement('div');
+          d.className = 'mfeat';
+          d.textContent = f.trim();
+          feats.appendChild(d);
+        }
+      });
+    }
+
+    document.getElementById('mViewBtn').onclick = () => {
+      if (window.dataLayer) dataLayer.push({ event: 'click_ver_detalles', property_name: p.titulo, property_zone: p.zona, page_location: window.location.href });
+      if (p.url) window.open(p.url, '_blank');
+      else window.open('https://www.coldwellbanker.es?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=modal_ver&b=20', '_blank');
+    };
+    document.getElementById('mAskBtn').onclick = () => {
+      if (window.dataLayer) dataLayer.push({ event: 'click_solicitar_info', property_name: p.titulo, property_zone: p.zona, page_location: window.location.href });
+      // Mostrar formulario dentro del modal
+      document.getElementById('mctas').style.display = 'none';
+      document.getElementById('mFormSection').classList.add('active');
+      document.getElementById('mFormPropName').textContent = p.titulo;
+      document.getElementById('mFormOk').style.display = 'none';
+      document.getElementById('mFormFields').style.display = 'block';
+      document.getElementById('mfName').value = '';
+      document.getElementById('mfPhone').value = '';
+      document.getElementById('mfEmail').value = '';
+      document.getElementById('mfLegal').checked = false;
+      document.getElementById('mfErr').style.display = 'none';
+    };
+
+    document.getElementById('modal').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+    if (window.dataLayer) dataLayer.push({ event: 'view_property', property_name: p.titulo, property_zone: p.zona });
+  }
+
+  function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+    document.body.style.overflow = '';
+    currentModal = null;
+    // Reset modal form
+    document.getElementById('mFormSection').classList.remove('active');
+    document.getElementById('mctas').style.display = '';
+  }
+
+  function openForm(propName) {
+    propertyInterest = propName || '';
+    const ptag = document.getElementById('ffPtag');
+    const pval = document.getElementById('ffPtagVal');
+    if (propName) {
+      pval.textContent = propName;
+      ptag.style.display = 'block';
+    } else {
+      ptag.style.display = 'none';
+    }
+    document.getElementById('ffBody').classList.add('open');
+    document.getElementById('ffArr').classList.add('open');
+    ffOpen = true;
+    setTimeout(() => {
+      document.getElementById('ff').scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }, 100);
+  }
+
+  // ─── FORM STEPS ───────────────────────────────────────────────────────────
+  function goStep(n) {
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    if (n <= 3) document.getElementById('panel' + n).classList.add('active');
+    step = n;
+    [1,2,3].forEach(i => {
+      document.getElementById('st' + i).classList.toggle('done', i <= n);
+    });
+  }
+
+  function validateStep1() {
+    const name = document.getElementById('fname').value.trim();
+    const phone = document.getElementById('fphone').value.trim();
+    const ok = !!(name || phone);
+    document.getElementById('errName').style.display = ok ? 'none' : 'block';
+    return ok;
+  }
+
+  function validateStep2() {
+    const timeline = document.getElementById('ftimeline').value;
+    const ok = !!timeline;
+    document.getElementById('errTime').style.display = ok ? 'none' : 'block';
+    return ok;
+  }
+
+  function validateStep3() {
+    const email = document.getElementById('femail').value.trim();
+    const legal = document.getElementById('flegals').checked;
+    const ok = !!(email && legal);
+    document.getElementById('errLegal').style.display = (email && !legal) ? 'block' : 'none';
+    return ok;
+  }
+
+  async function sendForm() {
+    if (!validateStep3()) return;
+    const btn = document.getElementById('sendBtn');
+    btn.disabled = true;
+    btn.textContent = '…';
+
+    const payload = {
+      nombre: document.getElementById('fname').value.trim(),
+      telefono: (document.getElementById('fcode').value || '+34') + ' ' + document.getElementById('fphone').value.trim(),
+      zona: document.getElementById('fzone').value,
+      presupuesto: document.getElementById('fbudget').value,
+      tiempo: document.getElementById('ftimeline').value,
+      email: document.getElementById('femail').value.trim(),
+      propiedad: propertyInterest,
+      idioma: lang,
+      fecha: new Date().toISOString(),
+      fuente: window.location.href
+    };
+
+    if (window.dataLayer) { dataLayer.push({ event: 'generate_lead', lead_email: payload.email, lead_zone: payload.zona, page_location: window.location.href }); dataLayer.push({ event: 'form_submit', page_location: window.location.href }); }
+
+    try {
+      await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+    } catch(e) {
+      console.warn('Webhook error:', e.message);
+    }
+
+    // Show success regardless
+    document.querySelectorAll('.step-panel').forEach(p => p.classList.remove('active'));
+    document.getElementById('panelOk').classList.add('active');
+    document.querySelectorAll('.ff-st').forEach(s => s.classList.add('done'));
+  }
+
+  // ─── LANGUAGE ─────────────────────────────────────────────────────────────
+  function applyLang(l) {
+    lang = l;
+    const t = T[l];
+    const ids = {
+      heroTag: t.heroTag, heroSub: t.heroSub,
+      t1v: t.t1v, t1l: t.t1l, t2v: t.t2v, t2l: t.t2l, t3v: t.t3v, t3l: t.t3l,
+      sectionTag: t.sectionTag, sectionTitle: t.sectionTitle, sectionSub: t.sectionSub,
+      catNote: t.catNote, step1Lbl: t.step1, step2Lbl: t.step2, step3Lbl: t.step3,
+      nameLbl: t.nameLbl, phoneLbl: t.phoneLbl, zoneLbl: t.zoneLbl,
+      budgetLbl: t.budgetLbl, timelineLbl: t.timelineLbl, emailLbl: t.emailLbl,
+      errTime: t.errTime, okTitle: t.okTitle
+    };
+    Object.entries(ids).forEach(([id, val]) => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = val;
+    });
+    const htmlIds = { heroH1: t.h1, okSub: t.okSub, legalTxt: t.legal };
+    Object.entries(htmlIds).forEach(([id, val]) => {
+      const el = document.getElementById(id);
+      if (el) el.innerHTML = val;
+    });
+    ['heroCta','heroCtaOut','navCta','ffTabLabel'].forEach(id => {
+      const el = document.getElementById(id);
+      if (el) el.textContent = id.includes('Cta') ? (id === 'heroCta' ? t.heroCta : t.heroCtaOut) : (id === 'navCta' ? t.formTab : t.formTab);
+    });
+    document.getElementById('heroCta').textContent = t.heroCta;
+    document.getElementById('heroCtaOut').textContent = t.heroCtaOut;
+    document.getElementById('navCta').textContent = t.heroCtaOut;
+    document.getElementById('ffTabLabel').textContent = t.formTab;
+    document.getElementById('catBtn').textContent = t.catBtn;
+    document.getElementById('fname').placeholder = t.namePh;
+    document.getElementById('fphone').placeholder = '600 000 000';
+    document.getElementById('fzone').options[0].textContent = t.zonePh;
+    document.getElementById('fbudget').options[0].textContent = t.budgetPh;
+    document.getElementById('ftimeline').options[0].textContent = t.timelinePh;
+    t.tl.forEach((label, i) => {
+      const opt = document.getElementById('ftimeline').options[i + 1];
+      if (opt) opt.textContent = label;
+    });
+    document.getElementById('femail').placeholder = t.emailPh;
+    document.getElementById('next1Btn').textContent = t.next;
+    document.getElementById('next2Btn').textContent = t.next;
+    document.getElementById('back2Btn').textContent = t.back;
+    document.getElementById('back3Btn').textContent = t.back;
+    document.getElementById('sendBtn').textContent = t.send;
+    document.getElementById('langLabel').textContent = l;
+    document.querySelectorAll('.lang-opt').forEach(o => o.classList.toggle('act', o.dataset.lang === l));
+    const ffPtag = document.getElementById('ffPtag');
+    if (ffPtag) ffPtag.querySelector('strong').textContent = t.formProp;
+    renderCards();
+  }
+
+  // ─── INIT ─────────────────────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', () => {
+
+    // Language switcher
+    document.getElementById('langBtn').addEventListener('click', e => {
+      e.stopPropagation();
+      document.getElementById('langBtn').classList.toggle('open');
+      document.getElementById('langDd').classList.toggle('open');
+    });
+    document.querySelectorAll('.lang-opt').forEach(o => {
+      o.addEventListener('click', () => {
+        applyLang(o.dataset.lang);
+        document.getElementById('langBtn').classList.remove('open');
+        document.getElementById('langDd').classList.remove('open');
+      });
+    });
+    document.addEventListener('click', () => {
+      document.getElementById('langBtn').classList.remove('open');
+      document.getElementById('langDd').classList.remove('open');
+    });
+
+    // Floating form toggle
+    document.getElementById('ffTab').addEventListener('click', () => {
+      ffOpen = !ffOpen;
+      document.getElementById('ffBody').classList.toggle('open', ffOpen);
+      document.getElementById('ffArr').classList.toggle('open', ffOpen);
+    });
+
+    // Nav CTA & hero buttons — abren cal.com para agendar llamada
+    const CAL_LINK = 'prodyx-agency-zpcsdn/15min';
+    document.getElementById('navCta').addEventListener('click', () => {
+      Cal('modal', { calLink: CAL_LINK, config: { layout: 'month_view' } });
+      if (window.dataLayer) dataLayer.push({ event: 'click_agendar_navbar', button_location: 'navbar', page_location: window.location.href });
+    });
+    document.getElementById('heroCta').addEventListener('click', () => {
+      document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+    });
+    document.getElementById('heroCtaOut').addEventListener('click', () => {
+      Cal('modal', { calLink: CAL_LINK, config: { layout: 'month_view' } });
+      if (window.dataLayer) dataLayer.push({ event: 'click_agendar_banner', button_location: 'hero_banner', page_location: window.location.href });
+    });
+    document.getElementById('scrollArrow').addEventListener('click', () => {
+      document.getElementById('properties').scrollIntoView({ behavior: 'smooth' });
+    });
+
+    // Catalogue button
+    document.getElementById('catBtn').addEventListener('click', () => {
+      window.open('https://www.coldwellbanker.es/en/buy/search-results?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=catbtn&b=20', '_blank');
+      if (window.dataLayer) dataLayer.push({ event: 'click_catalogo_oficial', page_location: window.location.href });
+    });
+
+    // Form navigation
+    document.getElementById('next1Btn').addEventListener('click', () => { if (validateStep1()) { goStep(2); if (window.dataLayer) dataLayer.push({ event: 'form_step_1_complete', page_location: window.location.href }); } });
+    document.getElementById('next2Btn').addEventListener('click', () => { if (validateStep2()) { goStep(3); if (window.dataLayer) dataLayer.push({ event: 'form_step_2_complete', page_location: window.location.href }); } });
+    document.getElementById('back2Btn').addEventListener('click', () => goStep(1));
+    document.getElementById('back3Btn').addEventListener('click', () => goStep(2));
+    document.getElementById('sendBtn').addEventListener('click', sendForm);
+
+    // Filters
+    document.getElementById('fltZona').addEventListener('change', applyFilters);
+    document.getElementById('fltPrecio').addEventListener('change', applyFilters);
+    document.getElementById('fltM2').addEventListener('change', applyFilters);
+    document.getElementById('filterClear').addEventListener('click', () => {
+      document.getElementById('fltZona').value = '';
+      document.getElementById('fltPrecio').value = '';
+      document.getElementById('fltM2').value = '';
+      applyFilters();
+    });
+
+    // Modal form handlers
+    document.getElementById('mFormBack').addEventListener('click', () => {
+      document.getElementById('mFormSection').classList.remove('active');
+      document.getElementById('mctas').style.display = '';
+    });
+    document.getElementById('mFormSend').addEventListener('click', async () => {
+      const name = document.getElementById('mfName').value.trim();
+      const phone = document.getElementById('mfPhone').value.trim();
+      const email = document.getElementById('mfEmail').value.trim();
+      const legal = document.getElementById('mfLegal').checked;
+      if (!(name || phone) || !email || !legal) {
+        document.getElementById('mfErr').style.display = 'block';
+        return;
+      }
+      const btn = document.getElementById('mFormSend');
+      btn.disabled = true; btn.textContent = '…';
+      const payload = {
+        nombre: name,
+        telefono: (document.getElementById('mfCode').value || '+34') + ' ' + phone,
+        email: email,
+        propiedad: document.getElementById('mFormPropName').textContent,
+        idioma: lang,
+        fecha: new Date().toISOString(),
+        fuente: window.location.href,
+        origen: 'modal_form'
+      };
+      if (window.dataLayer) dataLayer.push({ event: 'modal_form_submit', property_name: payload.propiedad, page_location: window.location.href });
+      try {
+        await fetch(WEBHOOK_URL, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+      } catch(e) { console.warn('Webhook error:', e.message); }
+      document.getElementById('mFormFields').style.display = 'none';
+      document.getElementById('mFormOk').style.display = 'block';
+      btn.disabled = false; btn.textContent = 'Enviar consulta';
+    });
+
+    // Modal close
+    document.getElementById('mClose').addEventListener('click', closeModal);
+    document.getElementById('modal').addEventListener('click', e => {
+      if (e.target === document.getElementById('modal')) closeModal();
+    });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+    // Initial language
+    applyLang('ES');
+    loadProperties();
+  });
+
+</script>
+
+<!-- Cal.com embed -->
+<script>
+  (function (C, A, L) {
+    let p = function (a, ar) { a.q.push(ar); };
+    let d = C.document;
+    C.Cal = C.Cal || function () {
+      let cal = C.Cal;
+      let ar = arguments;
+      if (!cal.loaded) {
+        cal.ns = {};
+        cal.q = cal.q || [];
+        d.head.appendChild(d.createElement("script")).src = A;
+        cal.loaded = true;
+      }
+      if (ar[0] === L) {
+        const api = function () { p(api, arguments); };
+        const namespace = ar[1];
+        api.q = api.q || [];
+        if (typeof namespace === "string") {
+          cal.ns[namespace] = cal.ns[namespace] || api;
+          p(cal.ns[namespace], ar);
+          p(cal, [L, namespace, ar[2]]);
+        } else {
+          p(cal, ar);
+        }
+        return;
+      }
+      p(cal, ar);
+    };
+  })(window, "https://app.cal.com/embed/embed.js", "init");
+
+  Cal("init", { origin: "https://cal.com" });
+
+  Cal("ui", {
+    styles: { branding: { brandColor: "#002169" } },
+    hideEventTypeDetails: false,
+    layout: "month_view"
+  });
+</script>
+</body>
+</html>
