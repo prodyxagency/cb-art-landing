@@ -473,15 +473,6 @@
           <option value="Puerto Banús">Puerto Banús</option>
           <option value="Indiferente">Indiferente</option>
         </select>
-        <label class="fflbl" id="budgetLbl">PRESUPUESTO APROXIMADO</label>
-        <select class="ffinp" id="fbudget">
-          <option value="">— Seleccionar —</option>
-          <option value="Hasta 500.000€">Hasta 500.000 €</option>
-          <option value="500.000€ – 1.000.000€">500.000 – 1.000.000 €</option>
-          <option value="1.000.000€ – 2.000.000€">1.000.000 – 2.000.000 €</option>
-          <option value="2.000.000€ – 5.000.000€">2.000.000 – 5.000.000 €</option>
-          <option value="Más de 5.000.000€">Más de 5.000.000 €</option>
-        </select>
         <label class="fflbl" id="timelineLbl">TIEMPO ESTIMADO DE COMPRA *</label>
         <select class="ffinp" id="ftimeline">
           <option value="">— Seleccionar —</option>
@@ -820,7 +811,7 @@
       nombre: document.getElementById('fname').value.trim(),
       telefono: (document.getElementById('fcode').value || '+34') + ' ' + document.getElementById('fphone').value.trim(),
       zona: document.getElementById('fzone').value,
-      presupuesto: document.getElementById('fbudget').value,
+
       tiempo: document.getElementById('ftimeline').value,
       email: document.getElementById('femail').value.trim(),
       propiedad: propertyInterest,
@@ -857,7 +848,7 @@
       sectionTag: t.sectionTag, sectionTitle: t.sectionTitle, sectionSub: t.sectionSub,
       catNote: t.catNote, step1Lbl: t.step1, step2Lbl: t.step2, step3Lbl: t.step3,
       nameLbl: t.nameLbl, phoneLbl: t.phoneLbl, zoneLbl: t.zoneLbl,
-      budgetLbl: t.budgetLbl, timelineLbl: t.timelineLbl, emailLbl: t.emailLbl,
+      timelineLbl: t.timelineLbl, emailLbl: t.emailLbl,
       errTime: t.errTime, okTitle: t.okTitle
     };
     Object.entries(ids).forEach(([id, val]) => {
@@ -881,7 +872,7 @@
     document.getElementById('fname').placeholder = t.namePh;
     document.getElementById('fphone').placeholder = '600 000 000';
     document.getElementById('fzone').options[0].textContent = t.zonePh;
-    document.getElementById('fbudget').options[0].textContent = t.budgetPh;
+
     document.getElementById('ftimeline').options[0].textContent = t.timelinePh;
     t.tl.forEach((label, i) => {
       const opt = document.getElementById('ftimeline').options[i + 1];
