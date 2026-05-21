@@ -1002,8 +1002,10 @@
     });
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
  
-    // Initial language
-    applyLang('ES');
+    // Initial language — detectar desde URL ?lang=XX
+    const urlLang = new URLSearchParams(window.location.search).get('lang');
+    const validLangs = ['ES', 'EN', 'FR', 'DE'];
+    applyLang(validLangs.includes((urlLang || '').toUpperCase()) ? urlLang.toUpperCase() : 'ES');
     loadProperties();
  
     // Auto-open Cal modal si viene del email con ?agendar=1
