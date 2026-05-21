@@ -807,17 +807,23 @@
     btn.disabled = true;
     btn.textContent = '…';
  
+    const _utms = new URLSearchParams(window.location.search);
     const payload = {
       nombre: document.getElementById('fname').value.trim(),
       telefono: (document.getElementById('fcode').value || '+34') + ' ' + document.getElementById('fphone').value.trim(),
       zona: document.getElementById('fzone').value,
- 
       tiempo: document.getElementById('ftimeline').value,
       email: document.getElementById('femail').value.trim(),
       propiedad: propertyInterest,
       idioma: lang,
       fecha: new Date().toISOString(),
-      fuente: window.location.href
+      fuente: window.location.href,
+      origen_lead: 'Landing',
+      utm_source: _utms.get('utm_source') || '',
+      utm_medium: _utms.get('utm_medium') || '',
+      utm_campaign: _utms.get('utm_campaign') || '',
+      utm_content: _utms.get('utm_content') || '',
+      utm_term: _utms.get('utm_term') || ''
     };
  
     if (window.dataLayer) { dataLayer.push({ event: 'generate_lead', lead_email: payload.email, lead_zone: payload.zona, page_location: window.location.href }); dataLayer.push({ event: 'form_submit', page_location: window.location.href }); }
