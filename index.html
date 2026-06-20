@@ -312,6 +312,7 @@
 
   <!-- GRID -->
   <div class="grid" id="propertyGrid"></div>
+  <div id="pagination" style="display:flex;justify-content:center;align-items:center;gap:8px;padding:24px 0 8px;flex-wrap:wrap"></div>
 
   <!-- CATALOGUE BOTTOM -->
   <div class="cat-bot">
@@ -530,7 +531,7 @@
   gtag('config', 'AW-16749711169');
 
   // ─── GOOGLE SHEETS CONFIG ─────────────────────────────────────────────────
-  const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS-2RQPtIkaRWD_eJ5t5gxTFrgRK2VA3ThPUojBSz8hZkjUrxH0xO9mypXDlGq3OoGYlatqbZNrvHMW/pub?gid=0&single=true&output=csv';
+  const SHEET_CSV_URL = 'https://docs.google.com/spreadsheets/d/1GezXgsN0bX2Y6njY1QPGKP-l-a-rpbEXON5v7-3gJBE/gviz/tq?tqx=out:csv&sheet=Sheet1';
 
   // ─── WEBHOOK ──────────────────────────────────────────────────────────────
   const WEBHOOK_URL = 'https://prodyx-agency.app.n8n.cloud/webhook/720b7607-65a9-4416-8412-8bce55346574';
@@ -539,6 +540,8 @@
   let ALL_PROPERTIES = [];
   let FILTERED = [];
   let lang = 'ES';
+  let currentPage = 1;
+  const ITEMS_PER_PAGE = 9;
   let step = 1;
   let ffOpen = true;
   let currentModal = null;
@@ -587,12 +590,16 @@
       const res = await fetch(SHEET_CSV_URL);
       const text = await res.text();
       const rows = parseCSV(text);
+      // dedup by titulo, show all, destacadas first then by price desc
+      const seen = new Set();
       ALL_PROPERTIES = rows
-        .filter(r => r.estado && r.estado.toLowerCase() === 'activa')
+        .filter(r => { if (!r.titulo || seen.has(r.titulo)) return false; seen.add(r.titulo); return true; })
         .sort((a, b) => {
           if (a.destacada === 'si' && b.destacada !== 'si') return -1;
           if (b.destacada === 'si' && a.destacada !== 'si') return 1;
-          return 0;
+          const pA = parseFloat(a.precio_num) || 0;
+          const pB = parseFloat(b.precio_num) || 0;
+          return pB - pA;
         });
       populateZoneFilter();
       applyFilters();
@@ -650,6 +657,7 @@
 
     const count = FILTERED.length;
     document.getElementById('filterCount').textContent = count > 0 ? count + ' propiedad' + (count !== 1 ? 'es' : '') : '';
+    currentPage = 1;
     renderCards();
   }
 
@@ -657,14 +665,24 @@
   function renderCards() {
     const t = T[lang];
     const grid = document.getElementById('propertyGrid');
+    const pagDiv = document.getElementById('pagination');
+
     if (FILTERED.length === 0 && ALL_PROPERTIES.length > 0) {
       grid.innerHTML = '<div class="no-results">No hay propiedades con esos filtros.<br><span style="font-size:10px">Probá cambiando los criterios de búsqueda.</span></div>';
+      pagDiv.innerHTML = '';
       return;
     }
-    grid.innerHTML = FILTERED.map((p, i) => `
-      <div class="card" data-idx="${i}">
+
+    const totalPages = Math.ceil(FILTERED.length / ITEMS_PER_PAGE);
+    const start = (currentPage - 1) * ITEMS_PER_PAGE;
+    const pageItems = FILTERED.slice(start, start + ITEMS_PER_PAGE);
+
+    grid.innerHTML = pageItems.map((p, i) => {
+      const globalIdx = start + i;
+      return `
+      <div class="card" data-idx="${globalIdx}">
         <div class="cimg">
-          <img src="${p.imagen_url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'}" alt="${p.titulo}" loading="${i < 3 ? 'eager' : 'lazy'}" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'" />
+          <img src="${p.url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'}" alt="${p.titulo}" loading="${i < 3 ? 'eager' : 'lazy'}" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'" />
           <div class="cig"></div>
           <div class="cbadge">${p.precio}</div>
           ${p.destacada === 'si' ? '<div style="position:absolute;top:9px;left:9px;background:#002169;color:#C1A062;padding:3px 7px;border-radius:2px;font-size:8px;font-weight:700;letter-spacing:.06em">★ DESTACADA</div>' : ''}
@@ -673,19 +691,69 @@
           <div class="czone">${p.zona}</div>
           <div class="cname">${p.titulo}</div>
           <div class="cstats">
-            <div><div class="csv">${p.habitaciones}</div><div class="csl">${t.beds}</div></div>
-            <div><div class="csv">${p.banos}</div><div class="csl">${t.baths}</div></div>
+            <div><div class="csv">${p.habitaciones || p.banos || '—'}</div><div class="csl">${t.beds}</div></div>
+            <div><div class="csv">${p.banos_real || '—'}</div><div class="csl">${t.baths}</div></div>
             <div><div class="csv">${p.m2}</div><div class="csl">m²</div></div>
           </div>
           <button class="cbtn">${t.askInfo}</button>
         </div>
-      </div>`).join('');
+      </div>`;
+    }).join('');
 
     // card click → modal
     grid.querySelectorAll('.card').forEach(card => {
       card.addEventListener('click', () => {
         const idx = parseInt(card.dataset.idx);
         showModal(FILTERED[idx]);
+      });
+    });
+
+    // ─── PAGINATION CONTROLS ──────────────────────────────────────────────
+    if (totalPages <= 1) {
+      pagDiv.innerHTML = '';
+      return;
+    }
+
+    const btnStyle = (active) =>
+      `style="min-width:36px;height:36px;padding:0 10px;border:1.5px solid ${active ? '#002169' : '#d0d0d0'};background:${active ? '#002169' : '#fff'};color:${active ? '#fff' : '#002169'};font-size:13px;font-weight:${active ? '700' : '400'};border-radius:4px;cursor:${active ? 'default' : 'pointer'};font-family:inherit"`;
+
+    let html = '';
+
+    // Prev button
+    html += `<button ${btnStyle(false)} ${currentPage === 1 ? 'disabled style="min-width:36px;height:36px;padding:0 10px;border:1.5px solid #e0e0e0;background:#f5f5f5;color:#aaa;font-size:13px;border-radius:4px;cursor:default;font-family:inherit"' : ''} data-page="${currentPage - 1}">&#8592;</button>`;
+
+    // Page number buttons — show max 5, with ellipsis
+    let pages = [];
+    if (totalPages <= 7) {
+      for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+      pages.push(1);
+      if (currentPage > 3) pages.push('…');
+      for (let i = Math.max(2, currentPage - 1); i <= Math.min(totalPages - 1, currentPage + 1); i++) pages.push(i);
+      if (currentPage < totalPages - 2) pages.push('…');
+      pages.push(totalPages);
+    }
+
+    pages.forEach(p => {
+      if (p === '…') {
+        html += `<span style="padding:0 4px;color:#aaa;line-height:36px">…</span>`;
+      } else {
+        const isActive = p === currentPage;
+        html += `<button ${btnStyle(isActive)} ${isActive ? 'disabled' : `data-page="${p}"`}>${p}</button>`;
+      }
+    });
+
+    // Next button
+    html += `<button ${btnStyle(false)} ${currentPage === totalPages ? 'disabled style="min-width:36px;height:36px;padding:0 10px;border:1.5px solid #e0e0e0;background:#f5f5f5;color:#aaa;font-size:13px;border-radius:4px;cursor:default;font-family:inherit"' : ''} data-page="${currentPage + 1}">&#8594;</button>`;
+
+    pagDiv.innerHTML = html;
+
+    // Pagination click handlers
+    pagDiv.querySelectorAll('button[data-page]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        currentPage = parseInt(btn.dataset.page);
+        renderCards();
+        document.getElementById('propiedades')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
     });
   }
@@ -695,13 +763,13 @@
     const t = T[lang];
     currentModal = p;
     propertyInterest = p.titulo;
-    document.getElementById('mImg').src = p.imagen_url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800';
+    document.getElementById('mImg').src = p.url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800';
     document.getElementById('mImg').onerror = function(){ this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'; };
     document.getElementById('mZone').textContent = p.zona;
     document.getElementById('mTitle').textContent = p.titulo;
     document.getElementById('mPrice').textContent = p.precio;
-    document.getElementById('mBeds').textContent = p.habitaciones;
-    document.getElementById('mBaths').textContent = p.banos;
+    document.getElementById('mBeds').textContent = p.habitaciones || p.banos || '—';
+    document.getElementById('mBaths').textContent = p.banos_real || '—';
     document.getElementById('mM2').textContent = p.m2;
     document.getElementById('mBedsL').textContent = t.beds;
     document.getElementById('mBathsL').textContent = t.baths;
@@ -724,7 +792,7 @@
 
     document.getElementById('mViewBtn').onclick = () => {
       if (window.dataLayer) dataLayer.push({ event: 'click_ver_detalles', property_name: p.titulo, property_zone: p.zona, page_location: window.location.href });
-      if (p.url) window.open(p.url, '_blank');
+      if (p.imagen_url) window.open(p.imagen_url, '_blank');
       else window.open('https://www.coldwellbanker.es/costa-del-sol?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=modal_ver&b=20', '_blank');
     };
     document.getElementById('mAskBtn').onclick = () => {
