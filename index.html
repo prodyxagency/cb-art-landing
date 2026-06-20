@@ -682,7 +682,7 @@
       return `
       <div class="card" data-idx="${globalIdx}">
         <div class="cimg">
-          <img src="${p.url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'}" alt="${p.titulo}" loading="${i < 3 ? 'eager' : 'lazy'}" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'" />
+          <img src="${p.imagen_url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'}" alt="${p.titulo}" loading="${i < 3 ? 'eager' : 'lazy'}" onerror="this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'" />
           <div class="cig"></div>
           <div class="cbadge">${p.precio}</div>
           ${p.destacada === 'si' ? '<div style="position:absolute;top:9px;left:9px;background:#002169;color:#C1A062;padding:3px 7px;border-radius:2px;font-size:8px;font-weight:700;letter-spacing:.06em">★ DESTACADA</div>' : ''}
@@ -691,8 +691,8 @@
           <div class="czone">${p.zona}</div>
           <div class="cname">${p.titulo}</div>
           <div class="cstats">
-            <div><div class="csv">${p.habitaciones || p.banos || '—'}</div><div class="csl">${t.beds}</div></div>
-            <div><div class="csv">${p.banos_real || '—'}</div><div class="csl">${t.baths}</div></div>
+            <div><div class="csv">${p.habitaciones || '—'}</div><div class="csl">${t.beds}</div></div>
+            <div><div class="csv">${p.banos || '—'}</div><div class="csl">${t.baths}</div></div>
             <div><div class="csv">${p.m2}</div><div class="csl">m²</div></div>
           </div>
           <button class="cbtn">${t.askInfo}</button>
@@ -763,13 +763,13 @@
     const t = T[lang];
     currentModal = p;
     propertyInterest = p.titulo;
-    document.getElementById('mImg').src = p.url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800';
+    document.getElementById('mImg').src = p.imagen_url || 'https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800';
     document.getElementById('mImg').onerror = function(){ this.src='https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800'; };
     document.getElementById('mZone').textContent = p.zona;
     document.getElementById('mTitle').textContent = p.titulo;
     document.getElementById('mPrice').textContent = p.precio;
-    document.getElementById('mBeds').textContent = p.habitaciones || p.banos || '—';
-    document.getElementById('mBaths').textContent = p.banos_real || '—';
+    document.getElementById('mBeds').textContent = p.habitaciones || '—';
+    document.getElementById('mBaths').textContent = p.banos || '—';
     document.getElementById('mM2').textContent = p.m2;
     document.getElementById('mBedsL').textContent = t.beds;
     document.getElementById('mBathsL').textContent = t.baths;
@@ -792,7 +792,7 @@
 
     document.getElementById('mViewBtn').onclick = () => {
       if (window.dataLayer) dataLayer.push({ event: 'click_ver_detalles', property_name: p.titulo, property_zone: p.zona, page_location: window.location.href });
-      if (p.imagen_url) window.open(p.imagen_url, '_blank');
+      if (p.url) window.open(p.url, '_blank');
       else window.open('https://www.coldwellbanker.es/costa-del-sol?utm_source=PR_CB&utm_medium=cpc&utm_campaign=costadelsol_art&utm_content=modal_ver&b=20', '_blank');
     };
     document.getElementById('mAskBtn').onclick = () => {
